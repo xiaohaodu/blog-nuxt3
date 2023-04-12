@@ -1,6 +1,6 @@
 {
     "installCommand": "npm install",
     "buildCommand": "npm run build",
-    "devCommand": "node ./server/index.mjs",
+    "devCommand": "node server/index.mjs",
     "outputDirectory": ".output"
 }

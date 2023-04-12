@@ -1,5 +1,4 @@
 export default defineNuxtConfig({
-    ssr: false,
     alias: {
         "assets": "/assets",
         "public": "/public",

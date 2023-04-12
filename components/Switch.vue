@@ -25,7 +25,7 @@ const changeTheme = () => {
 }
 
 onMounted(() => {
-    dataThemeNight.value = JSON.parse(localStorage.getItem('dataThemeNight') || 'flase')
+    dataThemeNight.value = JSON.parse(localStorage.getItem('dataThemeNight') || 'false')
     link1 = document.createElement('link');
     link2 = document.createElement('link');
     if (dataThemeNight.value) {

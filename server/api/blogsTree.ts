@@ -3,7 +3,7 @@ export default defineEventHandler(even => {
     return new Promise((resolve, reject) => {
         const blogsTree = []
         try {
-            getAllfiles('_blogs', blogsTree)
+            getAllfiles('public/_blogs', blogsTree)
             blogsTreeHandler(blogsTree)
             resolve(blogsTree)
         } catch (error) {

@@ -2,7 +2,6 @@ export default defineNuxtConfig({
     alias: {
         "assets": "/assets",
         "public": "/public",
-        "_blogs": "/_blogs"
     },
     app: {
         head: {

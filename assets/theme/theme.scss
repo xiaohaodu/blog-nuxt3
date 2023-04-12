@@ -1,0 +1,47 @@
+$night-font-color: rgba(242, 242, 242);
+$night-background-color: rgba(20, 20, 20);
+$night-border-color: rgba(242, 242, 242, 0.5);
+$night-hover-color: rgba(91, 172, 135);
+$night-active-color: rgba(66, 184, 131);
+
+$light-font-color: rgba(72, 72, 72);
+$light-background-color: rgba(255, 255, 255);
+$light-border-color: rgba(72, 72, 72, 0.5);
+$light-hover-color: rgba(91, 172, 135);
+$light-active-color: rgba(66, 184, 131);
+
+@mixin theme-active {
+  [theme="night"] & {
+    font-weight: 600;
+    color: $night-active-color;
+    transition: color .25s, font-weight .25s;
+  }
+
+  [theme="light"] & {
+    font-weight: 600;
+    color: $light-active-color;
+    transition: color .25s, font-weight .25s;
+  }
+}
+
+@mixin theme-hover {
+  [theme='night'] & {
+    transition: color .25s;
+    color: $night-hover-color;
+  }
+
+  [theme='light'] & {
+    transition: color .25s;
+    color: $light-hover-color;
+  }
+}
+
+@mixin theme-border {
+  [theme='night'] & {
+    border-right: 1px solid $night-border-color;
+  }
+
+  [theme='light'] & {
+    border-right: 1px solid $light-border-color;
+  }
+}

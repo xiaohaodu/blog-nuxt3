@@ -12,6 +12,7 @@
 </template>
 
 <script lang="ts" setup>
+
 const blogsTree = await $fetch('/api/blogsTree')
 const readme = await $fetch('/api/blogReadme');
 let blogContent = ref(readme)

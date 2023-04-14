@@ -5,27 +5,26 @@
     </span>
 </template>
   
-<script lang="ts" setup>
-
-const dataThemeNight = useTheme()
-const reload = inject('reload')
+<script setup>
+const dataThemeNight = useTheme();
+const reload = inject('reload');
 let link1;
 let link2;
 const changeTheme = () => {
-    dataThemeNight.value = !dataThemeNight.value
+    dataThemeNight.value = !dataThemeNight.value;
     if (dataThemeNight.value) {
-        link1.href = '/theme/night.css'
-        link2.href = '/theme/github-block-dark.css'
+        link1.href = '/theme/night.css';
+        link2.href = '/theme/github-block-dark.css';
         window.document.documentElement.setAttribute('theme', 'night');
     } else {
-        link1.href = '/theme/github.css'
-        link2.href = '/theme/github-block.css'
+        link1.href = '/theme/github.css';
+        link2.href = '/theme/github-block.css';
         window.document.documentElement.setAttribute('theme', 'light');
     }
-}
+};
 
 onMounted(() => {
-    dataThemeNight.value = JSON.parse(localStorage.getItem('dataThemeNight') || 'false')
+    dataThemeNight.value = JSON.parse(localStorage.getItem('dataThemeNight') || 'false');
     link1 = document.createElement('link');
     link2 = document.createElement('link');
     if (dataThemeNight.value) {
@@ -53,11 +52,11 @@ onMounted(() => {
         document.getElementsByTagName("head")[0].appendChild(link2);
         window.document.documentElement.setAttribute('theme', 'light');
     }
-})
+});
 
 onBeforeUnmount(() => {
-    localStorage.setItem('dataThemeNight', dataThemeNight.value.toString())
-})
+    localStorage.setItem('dataThemeNight', dataThemeNight.value.toString());
+});
 </script>
   
 <style lang="scss" scoped>

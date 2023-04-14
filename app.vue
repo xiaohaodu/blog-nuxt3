@@ -1,9 +1,5 @@
 <template>
-  <nav id="nav">
-    <li>
-      <Switch></Switch>
-    </li>
-  </nav>
+  <Navigation></Navigation>
   <router-view></router-view>
 </template>
 <script lang="ts" setup>
@@ -24,18 +20,6 @@ const reload = () => {
 provide('reload', reload)
 </script>
 <style lang="scss">
-#nav {
-  position: fixed;
-  top: 5vh;
-  right: 10vw;
-  z-index: 2;
-}
-
-#readme {
-  cursor: pointer;
-  width: fit-content;
-}
-
 * {
   margin: 0;
   padding: 0;

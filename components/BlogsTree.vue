@@ -1,35 +1,23 @@
 <template>
     <li v-for="(item, index) in blogsTree" :key="index">
-        <span :class="item.type" v-html="fileNameHandler(item)" @click="toBlog(item, $event)"></span>
+        <nuxt-link v-if="item.type == 'file'" :to="'/blogs/' + fileNameHandler(item)" @click="setBlogPath(item.path)"
+            :class="{ active: fileNameHandler(item) == props.active }" class="file">{{
+                fileNameHandler(item) }}</nuxt-link>
+        <span v-if="item.type == 'dir'">{{ item.name }}</span>
         <ul v-if="item.type == 'dir' && item.children.length">
-            <BlogsTree :blogsTree="item.children" v-if="item.type == 'dir' && item.children.length"></BlogsTree>
+            <BlogsTree :blogsTree="item.children" v-if="item.type == 'dir' && item.children.length" :active="props.active">
+            </BlogsTree>
         </ul>
     </li>
 </template> 
 
-<script lang="ts" setup>
-const props = defineProps(['blogsTree'])
-const blogsTree = props.blogsTree
-onMounted(() => {
-})
-
-const setBlogContent = inject('setBlogContent')
-const toBlog = async (item, $event) => {
-    if (item.type == 'file') {
-        const fileContent = await $fetch('/api/readblog', { params: { path: item.path } });
-        setBlogContent(fileContent);
-        const actives = document.querySelectorAll('.active');
-        actives.forEach(item => {
-            item.classList.remove('active')
-        })
-        $event.target.classList.add('active')
-    }
-}
+<script setup>
+const props = defineProps(['blogsTree', 'active']);
+const blogsTree = props.blogsTree;
+const setBlogPath = inject('setBlogPath');
 const fileNameHandler = (item) => {
-    const reg = /(.md)$/
-    const name = item.name
-    return item.type == 'file' ? name.replace(reg, '') : `<strong class='sort'>${name.replace(reg, '')}</strong>`
-}
+    return item.name.replace(/(.md)$/, '');
+};
 </script>
 
 <style lang="scss" scoped>

@@ -18,6 +18,9 @@ export default defineNuxtConfig({
             ],
         }
     },
+    routeRules: {
+        '/three/**': { ssr: false }
+    },
     modules: [
         '@element-plus/nuxt',
     ],

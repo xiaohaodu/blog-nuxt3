@@ -1,8 +1,11 @@
 <template>
+    <Head>
+        <Title>{{ router.currentRoute.value.params.blogName }}</Title>
+    </Head>
     <div id="blogs">
         <aside id="blogsTree">
             <ul>
-                <BlogsTree :blogsTree="blogsTree" :active="route.params.blogName"></BlogsTree>
+                <BlogsTree :blogsTree="blogsTree" :active="router.currentRoute.value.params.blogName"></BlogsTree>
             </ul>
         </aside>
         <div id="blogShow">
@@ -12,8 +15,10 @@
 </template>
 
 <script setup>
-const route = useRoute();
-// const blogName = route.params.blogName;
+const router = useRouter();
+// useHead({
+//     title: router.currentRoute.value.params.blogName
+// });
 const blogsTree = await $fetch('/api/blogsTree');
 const readme = await $fetch('/api/blogReadme');
 let blogContent = ref(readme);

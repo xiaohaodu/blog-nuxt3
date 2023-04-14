@@ -7,6 +7,15 @@
             <nuxt-link to="/">to home</nuxt-link>
         </li>
         <li>
+            <nuxt-link to="/three/box">to box</nuxt-link>
+        </li>
+        <li>
+            <nuxt-link to="/three/bear">to bear</nuxt-link>
+        </li>
+        <li>
+            <nuxt-link to="/three/vrhouse">to vrhouse</nuxt-link>
+        </li>
+        <li>
             <Switch></Switch>
         </li>
     </nav>

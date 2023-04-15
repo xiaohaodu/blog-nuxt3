@@ -5,7 +5,7 @@
 <script lang="ts" setup>
 useHead({
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `BlogOfXH-${titleChunk}` : 'BlogOfXH';
+    return titleChunk ? `甲壳虫-${titleChunk}` : '甲壳虫';
   }
 })
 const isRouterAlive = ref(true)

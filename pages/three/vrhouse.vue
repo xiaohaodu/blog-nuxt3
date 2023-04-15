@@ -1,5 +1,5 @@
 <template>
-    <div class="container" ref="container"></div>
+    <div id="container" ref="container"></div>
 </template>
   
 <script setup>
@@ -53,9 +53,10 @@ onMounted(() => {
 </script>
   
 <style lang="scss" scoped>
-.container {
-    height: 100vh;
+#container {
     width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 </style>
   

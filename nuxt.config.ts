@@ -22,6 +22,7 @@ export default defineNuxtConfig({
                     src: "https://www.googletagmanager.com/gtag/js?id=G-6VDYL7QTRW",
                     async: true,
                 },
+                { src: "/js/analitics.js" },
             ]
         }
     },

@@ -20,9 +20,12 @@
     "@nuxtjs/vercel-builder": "^0.24.0",
     "@types/three": "^0.150.1",
     "@vercel/node": "^2.10.3",
+    "dat.gui": "^0.7.9",
+    "gsap": "^3.11.5",
     "highlight.js": "^11.7.0",
     "isomorphic-dompurify": "^1.2.0",
     "marked": "^4.3.0",
+    "phaser": "^3.60.0",
     "three": "^0.151.3"
   }
 }

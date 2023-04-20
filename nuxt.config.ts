@@ -10,7 +10,6 @@ export default defineNuxtConfig({
             },
             meta: [
                 { charset: 'utf-8' },
-                { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no' },
                 { name: 'referrer', content: 'no-referrer' }
             ],
             link: [
@@ -22,12 +21,13 @@ export default defineNuxtConfig({
                     src: "https://www.googletagmanager.com/gtag/js?id=G-6VDYL7QTRW",
                     async: true,
                 },
-                { src: "/js/analitics.js" },
+                { src: "/analytics.js" },
             ]
         }
     },
     routeRules: {
-        '/three/**': { ssr: false }
+        '/three/**': { ssr: false },
+        '/game/**': { ssr: false }
     },
     modules: [
         '@element-plus/nuxt',

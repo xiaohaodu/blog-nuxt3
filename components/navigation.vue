@@ -16,6 +16,15 @@
             <nuxt-link to="/three/vrhouse">to vrhouse</nuxt-link>
         </li>
         <li>
+            <nuxt-link to="/game/pixel">to pixel</nuxt-link>
+        </li>
+        <li>
+            <nuxt-link to="/game/knifehit">to knifehit</nuxt-link>
+        </li>
+        <li>
+            <nuxt-link to="/game/platepixel">to platepixel</nuxt-link>
+        </li>
+        <li>
             <Switch></Switch>
         </li>
     </nav>

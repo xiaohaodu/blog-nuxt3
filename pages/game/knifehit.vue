@@ -14,7 +14,7 @@ const knifehit = ref(null);
 onMounted(() => {
     // 游戏的参数设置
     const gameConfig = {
-        type: Phaser.CANVAS,
+        type: Phaser.AUTO,
         parent: knifehit.value,
         width: 750,
         height: 1334,

@@ -12,17 +12,24 @@ onMounted(() => {
     const config = {
         type: Phaser.AUTO,
         parent: pixel.value,
-        width: pixel.value.clientWidth - 1,
-        height: pixel.value.clientHeight - 1,
         physics: {
-            default: 'arcade',
-            arcade: {
-                gravity: { y: 200 }
+            default: 'matter',
+            matter: {
+                // debug: true,
+                gravity: { y: 0 },
+                setBounds: {
+                    left: true,
+                    right: true,
+                    top: true,
+                    bottom: true
+                }
             }
         },
-        scence: [BootScene, GameScene],
+        scaleMode: 3,
+        scene: [BootScene, GameScene],
     };
     const game = new Phaser.Game(config);
+    window.focus();
 });
 </script>
 
@@ -30,5 +37,7 @@ onMounted(() => {
 #pixel {
     width: 100vw;
     height: 100vh;
+    text-align: center;
+    overflow: hidden;
 }
 </style>

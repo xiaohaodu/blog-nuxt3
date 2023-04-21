@@ -1,11 +1,11 @@
-import fs from 'fs'
+import fs from 'fs';
 export default defineEventHandler(event => {
     return new Promise((resolve, reject) => {
         fs.readFile(`public/_blogs/README.md`, 'utf-8', (err, data) => {
             if (err) {
-                reject(err)
+                reject(err);
             }
-            resolve(data)
-        })
-    })
-})
+            resolve(data);
+        });
+    });
+});

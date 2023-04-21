@@ -12,8 +12,6 @@ onMounted(() => {
     const config = {
         type: Phaser.AUTO,
         parent: platepixel.value,
-        width: platepixel.value.clientWidth,
-        height: platepixel.value.clientHeight,
         physics: {
             default: 'arcade',
             arcade: {
@@ -21,6 +19,7 @@ onMounted(() => {
                 debug: false
             }
         },
+        scaleMode: 3,
         scene: [playGame]
     };
     const game = new Phaser.Game(config);

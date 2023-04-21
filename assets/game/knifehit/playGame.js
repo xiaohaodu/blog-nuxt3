@@ -20,7 +20,7 @@ class playGame extends Phaser.Scene {
     };
     constructor() {
         super("playGame");
-        console.log(this);
+        // console.log(this);
     }
     // 预加载
     preload() {

@@ -5,6 +5,7 @@
 </template>
 
 <script setup>
+import { Game } from '@/assets/game/breakout/game';
 const breakout = ref(null);
 onMounted(() => {
     const config = {
@@ -15,11 +16,7 @@ onMounted(() => {
         physics: {
             default: 'arcade'
         },
-        scene: {
-            preload: preload,
-            create: create,
-            update: update
-        }
+        scene: [Game]
     };
     const game = new Phaser.Game(config);
 });

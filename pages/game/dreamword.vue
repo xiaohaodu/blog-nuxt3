@@ -1,22 +1,22 @@
 <template>
-    <div ref="pixel" id="pixel">
-    </div>
+    <div ref="dreamword" id="dreamword"></div>
 </template>
 
 <script setup>
 import Phaser from 'phaser';
-import { Boot as BootScene } from '~/assets/game/pixel/js/scene/Boot.js';
-import { Game as GameScene } from '~/assets/game/pixel/js/scene/Game.js';
-const pixel = ref(null);
+import { BootScene } from '~/assets/game/dreamword/Scene/BootScene';
+import { GameScene } from '~/assets/game/dreamword/Scene/GameScene';
+const dreamword = ref(null);
 onMounted(() => {
     const config = {
         type: Phaser.AUTO,
-        parent: pixel.value,
-        width: 965,
+        parent: dreamword.value,
+        height: 384,
+        width: 768,
         physics: {
             default: 'matter',
             matter: {
-                // debug: true,
+                debug: true,
                 gravity: { y: 0 },
                 setBounds: {
                     left: true,
@@ -35,9 +35,9 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-#pixel {
-    width: 100vw;
+#dreamword {
     height: 100vh;
+    width: 100vw;
     text-align: center;
     overflow: hidden;
 }

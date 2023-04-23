@@ -1,18 +1,16 @@
 <template>
-    <div ref="pixel" id="pixel">
+    <div ref="kingAndPigs" id="kingAndPigs">
+
     </div>
 </template>
 
 <script setup>
 import Phaser from 'phaser';
-import { Boot as BootScene } from '~/assets/game/pixel/js/scene/Boot.js';
-import { Game as GameScene } from '~/assets/game/pixel/js/scene/Game.js';
-const pixel = ref(null);
+const kingAndPigs = ref(null);
 onMounted(() => {
     const config = {
         type: Phaser.AUTO,
-        parent: pixel.value,
-        width: 965,
+        parent: kingAndPigs.value,
         physics: {
             default: 'matter',
             matter: {
@@ -27,17 +25,15 @@ onMounted(() => {
             }
         },
         scaleMode: 3,
-        scene: [BootScene, GameScene],
+        scene: []
     };
-    const game = new Phaser.Game(config);
-    window.focus();
 });
 </script>
 
 <style lang="scss" scoped>
-#pixel {
-    width: 100vw;
+#kingAndPigs {
     height: 100vh;
+    width: 100vw;
     text-align: center;
     overflow: hidden;
 }

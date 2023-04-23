@@ -18,11 +18,11 @@ class GameScene extends Phaser.Scene {
         this.#car.setTexture('mapspritesheet', 716);
         tileLayer.setCollisionFromCollisionGroup(true, true);
         // console.log(tileLayer);
+        // console.log(this.#me);
         //不知道为什么这里出错
+        console.log(map);
         // this.matter.world.convertTilemapLayer(tileLayer);
         this.matter.world.setBounds();
-        // console.log(this.matter);
-        // console.log(this.#car);
     }
     update() {
         this.#me.update();

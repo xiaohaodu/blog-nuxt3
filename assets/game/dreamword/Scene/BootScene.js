@@ -16,7 +16,7 @@ class BootScene extends Phaser.Scene {
         this.load.on('complete', () => {
             this.scene.start('game');
         });
-        // this.load.image('mapsheet', mapsheet);
+        this.load.image('mapsheet', mapsheet);
         this.load.spritesheet('mapspritesheet', mapsheet, { frameWidth: 16, frameHeight: 16, spacing: 1 });
         this.load.tilemapTiledJSON('mapfantasy', mapfantasy);
         this.load.tilemapTiledJSON('mapinterior', mapinterior);

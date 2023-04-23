@@ -5,12 +5,13 @@ class Car extends Phaser.GameObjects.Sprite {
     speed = 6;
     constructor(scene) {
         super(scene);
-        scene.add.existing(this);
         scene.matter.add.gameObject(this);
+        this.setCircle(8);
         this.setVelocity(0, 0);
         this.setFrictionAir(0);
         this.setFriction(0);
-        this.setBounce(1);
+        this.setBounce(0);
+        this.setStatic(true);
         this.cursors = scene.input.keyboard.createCursorKeys();
         this.cursorswasd = scene.input.keyboard.addKeys('W,S,A,D');
     }

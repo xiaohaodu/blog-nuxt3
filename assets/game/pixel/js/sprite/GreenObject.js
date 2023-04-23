@@ -8,7 +8,6 @@ class GreenObject extends Phaser.GameObjects.Sprite {
         super(scene);
         this.setTexture('greenobject');
         this.setSize(36, 36);
-        scene.add.existing(this);
         scene.matter.add.gameObject(this);
         this.setVelocity(0, 0);
         this.setFrictionAir(0);

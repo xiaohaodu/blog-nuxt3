@@ -20,11 +20,12 @@ class Game extends Phaser.Scene {
         // console.log(this.map, this.colliderObjectLayer);
 
         this.greenObject.setTexture('greenobject');
-        this.greenObject.setSize(36, 36);
-        console.log(colliderLayer);
+        // console.log(colliderLayer);
+        // console.log(colliderLayer.body);
         colliderLayer.setCollisionFromCollisionGroup(true, true);
         this.matter.world.convertTilemapLayer(colliderLayer);
         this.matter.world.setBounds();
+        console.log(this.matter.world);
     }
     update() {
         this.greenObject.update();

@@ -20,7 +20,7 @@ class GameScene extends Phaser.Scene {
         // console.log(tileLayer);
         // console.log(this.#me);
         //不知道为什么这里出错
-        console.log(map);
+        // console.log(map);
         // this.matter.world.convertTilemapLayer(tileLayer);
         this.matter.world.setBounds();
     }

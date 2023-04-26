@@ -16,7 +16,7 @@ onMounted(() => {
         physics: {
             default: 'matter',
             matter: {
-                debug: true,
+                // debug: true,
                 gravity: { y: 0 },
                 setBounds: {
                     left: true,

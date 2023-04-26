@@ -4,7 +4,7 @@ class Me extends Phaser.GameObjects.Sprite {
     cursorswasd;
     speed = 4;
     constructor(scene) {
-        super(scene);
+        super(scene, 0, 0, 'mapspritesheet', 29);
         scene.matter.add.gameObject(this);
         this.setCircle(8);
         this.setVelocity(0, 0);

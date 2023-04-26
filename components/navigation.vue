@@ -31,6 +31,9 @@
             <nuxt-link to="/game/dreamword">to dreamword</nuxt-link>
         </li>
         <li>
+            <nuxt-link to="/game/kingandpigs">to king and pigs</nuxt-link>
+        </li>
+        <li>
             <Switch></Switch>
         </li>
     </nav>

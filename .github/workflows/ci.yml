@@ -23,8 +23,8 @@ jobs:
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
-#          ARGS: '-rltgoDzvO --delete'
-          ARGS: '-rltgoDzvO'
+          ARGS: '-rltgoDzvO --delete'
+          # ARGS: '-rltgoDzvO'
           SOURCE: .output # 这是要复制到阿里云静态服务器的文件夹名称
           REMOTE_HOST: '81.68.108.130' # 你的阿里云公网地址
           REMOTE_USER: root # 阿里云登录后默认为 root 用户，并且所在文件夹为 root

@@ -52,8 +52,8 @@ import PigBoxHideJumpAnticipation from '@/assets/game/kingandpigs/Sprites/06-Pig
 import PigBoxHideLookOut from '@/assets/game/kingandpigs/Sprites/06-Pig Hide in the Box/Looking Out (26x20).png';
 
 //PigMatch
-import PigMatchCannon from '@/assets/game/kingandpigs/Sprites/07-Pig With a Match/lighting the Cannon (26x18).png';
-import PigMatchLight from '@/assets/game/kingandpigs/Sprites/07-Pig With a Match/lighting the Match (26x18).png';
+import PigMatchCannon from '@/assets/game/kingandpigs/Sprites/07-Pig With a Match/Lighting the Cannon (26x18).png';
+import PigMatchLight from '@/assets/game/kingandpigs/Sprites/07-Pig With a Match/Lighting the Match (26x18).png';
 import PigMatchOn from '@/assets/game/kingandpigs/Sprites/07-Pig With a Match/Match On (26x18).png';
 
 //Bomb

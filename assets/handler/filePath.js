@@ -1,22 +1,22 @@
 const getLastDirElement = (currentElement) => {
-    const parentUL = currentElement.parentElement.parentElement.parentElement
+    const parentUL = currentElement.parentElement.parentElement.parentElement;
     if (parentUL.nodeName.toLowerCase() != 'li') {
-        return null
+        return null;
     }
-    return parentUL.children[0]
-}
+    return parentUL.children[0];
+};
 const getFileDirPath = (currentElement) => {
-    const path = []
+    const path = [];
     function findPath(currentElement) {
         const lastDirElement = getLastDirElement(currentElement);
         if (lastDirElement) {
-            path.push(lastDirElement.innerText)
-            findPath(lastDirElement)
+            path.push(lastDirElement.innerText);
+            findPath(lastDirElement);
         }
     }
-    findPath(currentElement)
-    return path.reverse().join('/')
-}
+    findPath(currentElement);
+    return path.reverse().join('/');
+};
 export {
     getFileDirPath
-}
+};

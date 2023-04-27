@@ -3,6 +3,14 @@ export default defineNuxtConfig({
         "assets": "/assets",
         "public": "/public",
     },
+    nitro: {
+        preset: 'node-server'
+    },
+    vite: {
+        build: {
+            assetsInlineLimit: 0 // 图片转 base64 编码的阈值
+        }
+    },
     app: {
         head: {
             htmlAttrs: {

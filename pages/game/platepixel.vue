@@ -25,7 +25,6 @@ onMounted(() => {
         scene: [playGame]
     };
     game = new Phaser.Game(config);
-    console.log(game);
 });
 onBeforeUnmount(() => {
     game.destroy();
@@ -36,6 +35,7 @@ onBeforeUnmount(() => {
 #platepixel {
     height: 100vh;
     width: 100vw;
+    text-align: center;
     overflow: hidden;
 }
 </style>

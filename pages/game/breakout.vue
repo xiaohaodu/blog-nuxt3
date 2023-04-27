@@ -18,7 +18,7 @@ onMounted(() => {
         physics: {
             default: 'arcade'
         },
-        // scaleMode: 3,
+        scaleMode: 3,
         scene: [Game]
     };
     game = new Phaser.Game(config);

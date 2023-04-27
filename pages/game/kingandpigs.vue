@@ -7,8 +7,10 @@ import Phaser from 'phaser';
 import { BootScene } from '~/assets/game/kingandpigs/BootScene';
 import { GameStart } from '~/assets/game/kingandpigs/GameStart';
 const kingAndPigs = ref(null);
+let config;
+let game;
 onMounted(() => {
-    const config = {
+    config = {
         type: Phaser.AUTO,
         parent: kingAndPigs.value,
         pixelArt: true,
@@ -28,8 +30,11 @@ onMounted(() => {
         scaleMode: 3,
         scene: [BootScene, GameStart]
     };
-    const game = new Phaser.Game(config);
+    game = new Phaser.Game(config);
     window.focus();
+});
+onBeforeUnmount(() => {
+    game.destroy();
 });
 </script>
 

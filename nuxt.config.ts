@@ -39,8 +39,8 @@ export default defineNuxtConfig({
     },
     plugins: [
         { src: "~/plugins/three" },
-        { src: "~/plugins/phaser" }
     ],
+
     build: {
         transpile: ["three"],
     },

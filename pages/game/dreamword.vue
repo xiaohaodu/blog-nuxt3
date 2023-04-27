@@ -7,8 +7,10 @@ import Phaser from 'phaser';
 import { BootScene } from '~/assets/game/dreamword/Scene/BootScene';
 import { GameScene } from '~/assets/game/dreamword/Scene/GameScene';
 const dreamword = ref(null);
+let config;
+let game;
 onMounted(() => {
-    const config = {
+    config = {
         type: Phaser.AUTO,
         parent: dreamword.value,
         height: 384,
@@ -29,8 +31,11 @@ onMounted(() => {
         scaleMode: 3,
         scene: [BootScene, GameScene],
     };
-    const game = new Phaser.Game(config);
+    game = new Phaser.Game(config);
     window.focus();
+});
+onBeforeUnmount(() => {
+    game.destroy();
 });
 </script>
 

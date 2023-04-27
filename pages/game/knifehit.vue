@@ -10,10 +10,11 @@ import { playGame } from '~/assets/game/knifehit/playGame.js';
 //ver 1.2
 // 窗口第一次加载...
 let game;
+let gameConfig;
 const knifehit = ref(null);
 onMounted(() => {
     // 游戏的参数设置
-    const gameConfig = {
+    gameConfig = {
         type: Phaser.AUTO,
         parent: knifehit.value,
         width: 750,
@@ -27,7 +28,9 @@ onMounted(() => {
     window.addEventListener("resize", resize, false);
 });
 
-
+onBeforeUnmount(() => {
+    game.destroy();
+});
 // 按比例调整窗口
 function resize() {
     const canvas = document.querySelector("canvas");

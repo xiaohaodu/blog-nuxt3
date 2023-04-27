@@ -146,6 +146,7 @@ class playGame extends Phaser.Scene {
     // 游戏每一帧执行 v1.2 增加两个参数
     //update(){
     update(time, delta) {
+        console.log('update');
         //v1.2 修改 使目标转动起来
         //this.target.angle += this.gameOptions.rotationSpeed;
         this.target.angle += this.currentRotationSpeed;

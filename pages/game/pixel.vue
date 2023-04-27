@@ -8,8 +8,10 @@ import Phaser from 'phaser';
 import { Boot as BootScene } from '~/assets/game/pixel/js/scene/Boot.js';
 import { Game as GameScene } from '~/assets/game/pixel/js/scene/Game.js';
 const pixel = ref(null);
+let config;
+let game;
 onMounted(() => {
-    const config = {
+    config = {
         type: Phaser.AUTO,
         parent: pixel.value,
         width: 965,
@@ -29,8 +31,11 @@ onMounted(() => {
         scaleMode: 3,
         scene: [BootScene, GameScene],
     };
-    const game = new Phaser.Game(config);
+    game = new Phaser.Game(config);
     window.focus();
+});
+onBeforeUnmount(() => {
+    game.destroy();
 });
 </script>
 

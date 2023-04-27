@@ -7,8 +7,10 @@
 <script setup>
 import { Game } from '@/assets/game/breakout/game';
 const breakout = ref(null);
+let config;
+let game;
 onMounted(() => {
-    const config = {
+    config = {
         type: Phaser.AUTO,
         parent: breakout.value,
         width: 800,
@@ -18,7 +20,10 @@ onMounted(() => {
         },
         scene: [Game]
     };
-    const game = new Phaser.Game(config);
+    game = new Phaser.Game(config);
+});
+onBeforeUnmount(() => {
+    game.destroy();
 });
 </script>
 

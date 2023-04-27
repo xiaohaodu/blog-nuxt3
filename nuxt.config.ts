@@ -29,6 +29,13 @@ export default defineNuxtConfig({
         '/three/**': { ssr: false },
         '/game/**': { ssr: false }
     },
+    plugins: [
+        { src: "~/plugins/three" },
+        { src: "~/plugins/phaser" }
+    ],
+    build: {
+        transpile: ["three"],
+    },
     modules: [
         '@element-plus/nuxt',
     ],

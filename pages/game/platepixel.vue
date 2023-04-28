@@ -21,7 +21,7 @@ onMounted(() => {
                 debug: false
             }
         },
-        // scaleMode: 3,
+        scaleMode: 3,
         scene: [playGame]
     };
     game = new Phaser.Game(config);

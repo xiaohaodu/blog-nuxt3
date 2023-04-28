@@ -1,7 +1,7 @@
 <template>
     <li v-for="(item, index) in blogsTree" :key="index">
-        <nuxt-link v-if="item.type == 'file'" :to="'/blogs/' + fileNameHandler(item)" @click="setBlogPath(item.path)"
-            :class="{ active: fileNameHandler(item) == props.active }" class="file">{{
+        <nuxt-link v-if="item.type == 'file'" :to="`/blogs/${fileNameHandler(item)}${filePathHandler(item)}`"
+            @click="setBlogPath(item.path)" :class="{ active: fileNameHandler(item) == props.active }" class="file">{{
                 fileNameHandler(item) }}</nuxt-link>
         <span v-if="item.type == 'dir'">{{ item.name }}</span>
         <ul v-if="item.type == 'dir' && item.children.length">
@@ -18,6 +18,15 @@ const setBlogPath = inject('setBlogPath');
 const fileNameHandler = (item) => {
     return item.name.replace(/(.md)$/, '');
 };
+const filePathHandler = (item) => {
+    const GROUP = item.path.split('/').slice(2, -1).join('-');
+    return GROUP ? `?GROUP=${GROUP}` : '';
+};
+onMounted(() => {
+    const active = document.getElementsByClassName("active")[0];
+    const e = new Event("click", { "bubbles": false, "cancelable": false });//模拟点击
+    active.dispatchEvent(e);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -33,5 +42,9 @@ const fileNameHandler = (item) => {
 
 .active {
     @include theme-active();
+}
+
+:deep(ul) {
+    min-width: min-content;
 }
 </style>

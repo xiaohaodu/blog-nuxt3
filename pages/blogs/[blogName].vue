@@ -16,17 +16,15 @@
 
 <script setup>
 const router = useRouter();
-// useHead({
-//     title: router.currentRoute.value.params.blogName
-// });
 const blogsTree = await $fetch('/api/blogsTree');
 const readme = await $fetch('/api/blogReadme');
 let blogContent = ref(readme);
 let blogPath = ref('');
-provide('setBlogPath', async (content) => {
+const setBlogPath = async (content) => {
     blogPath.value = content;
     blogContent.value = await $fetch('/api/readblog', { params: { path: blogPath.value } });
-});
+};
+provide('setBlogPath', setBlogPath);
 onMounted(() => {
 });
 </script>
@@ -40,7 +38,11 @@ onMounted(() => {
     #blogsTree {
         height: 100vh;
         padding: 5vh 2vw 0 0;
+        width: 20vw;
+        min-width: min-content;
         @include theme-border();
     }
+
+    #blogShow {}
 }
 </style>

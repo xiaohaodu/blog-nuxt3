@@ -7,6 +7,8 @@ class GameStart extends Phaser.Scene {
     }
     private king!: Phaser.Physics.Matter.Sprite;
     create() {
+        this.king = new King(this, 0, 0, 'KingIdle', 0);
+        console.log(this.king);
     }
     update() {
         this.king.update();

@@ -5,8 +5,8 @@
 
 <script setup>
 import Phaser from 'phaser';
-import { Boot as BootScene } from '~/assets/game/pixel/js/scene/Boot.js';
-import { Game as GameScene } from '~/assets/game/pixel/js/scene/Game.js';
+import { Boot as BootScene } from '~/assets/game/pixel/js/scene/Boot';
+import { Game as GameScene } from '~/assets/game/pixel/js/scene/Game';
 const pixel = ref(null);
 let config;
 let game;

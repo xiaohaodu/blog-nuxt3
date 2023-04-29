@@ -8,7 +8,7 @@ class Boot extends Phaser.Scene {
         super('bootscene');
     }
     preload() {
-        this.load.on('progress', (value) => {
+        this.load.on('progress', (value: number) => {
             console.log(value);
         });
         this.load.on('complete', () => {

@@ -6,26 +6,24 @@ class GameScene extends Phaser.Scene {
     constructor() {
         super('game');
     }
-    #me;
-    #car;
+    private me!: Me;
+    private car!: Car;
     create() {
         const map = this.make.tilemap({ key: 'mapfantasy' });
         const tileSheet = map.addTilesetImage('sheet', 'mapspritesheet', 16, 16, 0, 1);
-        const tileLayer = map.createLayer('word', tileSheet);
-        this.#me = map.createFromObjects('object', { name: 'me', classType: Me })[0];
-        this.#me.setTexture('mapspritesheet', 29);
-        this.#car = map.createFromObjects('object', { name: 'car', classType: Car })[0];
-        this.#car.setTexture('mapspritesheet', 716);
+        // const tileSheet = map.addTilesetImage('sheet', 'mapsheet', 16, 16);
+        const tileLayer = map.createLayer('word', tileSheet!)!;
+        this.me = map.createFromObjects('object', { name: 'me', classType: Me, key: 'mapspritesheet', frame: 29 })[0] as Me;
+        this.car = map.createFromObjects('object', { name: 'car', classType: Car, key: 'mapspritesheet', frame: 716 })[0] as Car;
         tileLayer.setCollisionFromCollisionGroup(true, true);
-        // console.log(tileLayer);
-        // console.log(this.#me);
-        //不知道为什么这里出错
-        // console.log(map);
+
+        console.log(tileLayer);
+
         // this.matter.world.convertTilemapLayer(tileLayer);
         this.matter.world.setBounds();
     }
     update() {
-        this.#me.update();
+        this.me.update();
     }
 }
 

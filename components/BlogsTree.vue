@@ -1,7 +1,7 @@
 <template>
     <li v-for="(item, index) in blogsTree" :key="index">
         <nuxt-link v-if="item.type == 'file'" :to="`/blogs/${fileNameHandler(item)}${filePathHandler(item)}`"
-            @click="setBlogPath(item.path)" :class="{ active: fileNameHandler(item) == props.active }" class="file">{{
+            @click="setBlogPath(item.path)" :class="{ active: fileBlogHandler(item) == props.active }" class="file">{{
                 fileNameHandler(item) }}</nuxt-link>
         <span v-if="item.type == 'dir'">{{ item.name }}</span>
         <ul v-if="item.type == 'dir' && item.children.length">
@@ -21,6 +21,9 @@ const fileNameHandler = (item) => {
 const filePathHandler = (item) => {
     const GROUP = item.path.split('/').slice(2, -1).join('-');
     return GROUP ? `?GROUP=${GROUP}` : '';
+};
+const fileBlogHandler = (item) => {
+    return item.path.slice(14, -3);
 };
 onMounted(() => {
     const active = document.getElementsByClassName("active")[0];

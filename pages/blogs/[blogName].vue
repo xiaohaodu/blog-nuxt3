@@ -5,7 +5,8 @@
     <div id="blogs">
         <aside id="blogsTree">
             <ul>
-                <BlogsTree :blogsTree="blogsTree" :active="router.currentRoute.value.params.blogName"></BlogsTree>
+                <BlogsTree :blogsTree="blogsTree" :active="active">
+                </BlogsTree>
             </ul>
         </aside>
         <div id="blogShow">
@@ -20,6 +21,9 @@ const blogsTree = await $fetch('/api/blogsTree');
 const readme = await $fetch('/api/blogReadme');
 let blogContent = ref(readme);
 let blogPath = ref('');
+const active = computed(() => {
+    return router.currentRoute.value.query.GROUP ? `${router.currentRoute.value.query.GROUP}/${router.currentRoute.value.params.blogName}` : router.currentRoute.value.params.blogName;
+});
 const setBlogPath = async (content) => {
     blogPath.value = content;
     blogContent.value = await $fetch('/api/readblog', { params: { path: blogPath.value } });

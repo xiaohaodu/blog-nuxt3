@@ -38,9 +38,7 @@ export default defineNuxtConfig({
         '/game/**': { ssr: false }
     },
     plugins: [
-        { src: "~/plugins/three" },
     ],
-
     build: {
         transpile: ["three"],
     },

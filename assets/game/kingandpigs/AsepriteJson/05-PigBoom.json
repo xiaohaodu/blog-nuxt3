@@ -203,6 +203,7 @@
  "meta": {
   "app": "http://www.aseprite.org/",
   "version": "1.2.27-dev",
+  "image": "05-PigBoom.png",
   "format": "RGBA8888",
   "size": { "w": 2000, "h": 80 },
   "scale": "1",
@@ -213,7 +214,6 @@
    { "name": "Throwing Boom", "from": 20, "to": 24, "direction": "forward" }
   ],
   "layers": [
-   { "name": "Fondo", "opacity": 255, "blendMode": "normal" },
    { "name": "Pig", "opacity": 255, "blendMode": "normal" }
   ],
   "slices": [

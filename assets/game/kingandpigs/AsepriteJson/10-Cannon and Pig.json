@@ -123,6 +123,7 @@
  "meta": {
   "app": "http://www.aseprite.org/",
   "version": "1.2.27-dev",
+  "image": "10-Cannon and Pig.png",
   "format": "RGBA8888",
   "size": { "w": 1440, "h": 96 },
   "scale": "1",
@@ -135,7 +136,6 @@
    { "name": "Cannon Ball", "from": 14, "to": 14, "direction": "forward" }
   ],
   "layers": [
-   { "name": "BG", "opacity": 255, "blendMode": "normal" },
    { "name": "Cannon", "opacity": 255, "blendMode": "normal" }
   ],
   "slices": [

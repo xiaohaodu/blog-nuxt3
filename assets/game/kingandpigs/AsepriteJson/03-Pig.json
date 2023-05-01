@@ -251,6 +251,7 @@
  "meta": {
   "app": "http://www.aseprite.org/",
   "version": "1.2.27-dev",
+  "image": "03-Pig.png",
   "format": "RGBA8888",
   "size": { "w": 2480, "h": 80 },
   "scale": "1",
@@ -266,7 +267,6 @@
    { "name": "Dead", "from": 27, "to": 30, "direction": "forward" }
   ],
   "layers": [
-   { "name": "Fondo", "opacity": 255, "blendMode": "normal" },
    { "name": "Dibujo", "opacity": 255, "blendMode": "normal" }
   ],
   "slices": [

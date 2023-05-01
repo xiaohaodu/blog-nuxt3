@@ -10,8 +10,9 @@ class King extends Phaser.Physics.Arcade.Sprite {
     private cursorswasd?: Cursorswasd;
     private speed = 150!;
     constructor(scene: Phaser.Scene, x: number, y: number, texture: string | Phaser.Textures.Texture, frame?: string | number | undefined) {
-        super(scene, x, y, texture, frame);
+        super(scene, x, y, texture = 'kingsheet', frame = 1);
         scene.physics.add.existing(this)
+        this.setSize(20, 32)
         this.cursors = scene.input.keyboard?.createCursorKeys();
         this.cursorswasd = { ...scene.input.keyboard?.addKeys('W,S,A,D') };
     }

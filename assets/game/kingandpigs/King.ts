@@ -8,7 +8,7 @@ interface Cursorswasd {
 class King extends Phaser.Physics.Arcade.Sprite {
     private cursors?: Phaser.Types.Input.Keyboard.CursorKeys;
     private cursorswasd?: Cursorswasd;
-    private speed = 4!;
+    private speed = 150!;
     constructor(scene: Phaser.Scene, x: number, y: number, texture: string | Phaser.Textures.Texture, frame?: string | number | undefined) {
         super(scene, x, y, texture, frame);
         scene.physics.add.existing(this)
@@ -16,7 +16,7 @@ class King extends Phaser.Physics.Arcade.Sprite {
         this.cursorswasd = { ...scene.input.keyboard?.addKeys('W,S,A,D') };
     }
     update() {
-        // this.setVelocity(0);
+        this.setVelocityX(0);
         if (this.cursors?.left.isDown || this.cursorswasd?.A?.isDown) {
             this.setVelocityX(-this.speed);
         }
@@ -24,7 +24,7 @@ class King extends Phaser.Physics.Arcade.Sprite {
             this.setVelocityX(this.speed);
         }
         if (this.cursors?.up.isDown || this.cursorswasd?.W?.isDown) {
-            this.setVelocityY(-this.speed - 30);
+            this.setVelocityY(-this.speed);
         }
         else if (this.cursors?.down.isDown || this.cursorswasd?.S?.isDown) {
             this.setVelocityY(this.speed);

@@ -1,0 +1,283 @@
+{ "frames": {
+   "07-KingPig 0.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 1.aseprite": {
+    "frame": { "x": 80, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 2.aseprite": {
+    "frame": { "x": 160, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 3.aseprite": {
+    "frame": { "x": 240, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 4.aseprite": {
+    "frame": { "x": 320, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 5.aseprite": {
+    "frame": { "x": 400, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 6.aseprite": {
+    "frame": { "x": 480, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 7.aseprite": {
+    "frame": { "x": 560, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 8.aseprite": {
+    "frame": { "x": 640, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 9.aseprite": {
+    "frame": { "x": 720, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 10.aseprite": {
+    "frame": { "x": 800, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 11.aseprite": {
+    "frame": { "x": 880, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 12.aseprite": {
+    "frame": { "x": 960, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 13.aseprite": {
+    "frame": { "x": 1040, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 14.aseprite": {
+    "frame": { "x": 1120, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 15.aseprite": {
+    "frame": { "x": 1200, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 16.aseprite": {
+    "frame": { "x": 1280, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 17.aseprite": {
+    "frame": { "x": 1360, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 18.aseprite": {
+    "frame": { "x": 1440, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 19.aseprite": {
+    "frame": { "x": 1520, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 20.aseprite": {
+    "frame": { "x": 1600, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 21.aseprite": {
+    "frame": { "x": 1680, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 22.aseprite": {
+    "frame": { "x": 1760, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 23.aseprite": {
+    "frame": { "x": 1840, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 24.aseprite": {
+    "frame": { "x": 1920, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 25.aseprite": {
+    "frame": { "x": 2000, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 26.aseprite": {
+    "frame": { "x": 2080, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 27.aseprite": {
+    "frame": { "x": 2160, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 28.aseprite": {
+    "frame": { "x": 2240, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 29.aseprite": {
+    "frame": { "x": 2320, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 30.aseprite": {
+    "frame": { "x": 2400, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "07-KingPig 31.aseprite": {
+    "frame": { "x": 2480, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.27-dev",
+  "format": "RGBA8888",
+  "size": { "w": 2560, "h": 80 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Idle", "from": 0, "to": 11, "direction": "forward" },
+   { "name": "Run", "from": 12, "to": 17, "direction": "forward" },
+   { "name": "Jump", "from": 18, "to": 20, "direction": "forward" },
+   { "name": "Jump", "from": 18, "to": 18, "direction": "forward" },
+   { "name": "Fall", "from": 19, "to": 19, "direction": "forward" },
+   { "name": "Ground", "from": 20, "to": 20, "direction": "forward" },
+   { "name": "Attack", "from": 21, "to": 25, "direction": "forward" },
+   { "name": "Hit", "from": 26, "to": 27, "direction": "forward" },
+   { "name": "Dead", "from": 28, "to": 31, "direction": "forward" }
+  ],
+  "layers": [
+   { "name": "Fondo", "opacity": 255, "blendMode": "normal" },
+   { "name": "Dibujo", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

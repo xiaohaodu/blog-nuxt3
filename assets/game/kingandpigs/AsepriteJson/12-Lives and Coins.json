@@ -1,0 +1,366 @@
+{ "frames": {
+   "12-Lives and Coins 0.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 1.aseprite": {
+    "frame": { "x": 96, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 2.aseprite": {
+    "frame": { "x": 192, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 3.aseprite": {
+    "frame": { "x": 288, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 4.aseprite": {
+    "frame": { "x": 384, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 5.aseprite": {
+    "frame": { "x": 480, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 6.aseprite": {
+    "frame": { "x": 576, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 7.aseprite": {
+    "frame": { "x": 672, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 8.aseprite": {
+    "frame": { "x": 768, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 9.aseprite": {
+    "frame": { "x": 864, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 10.aseprite": {
+    "frame": { "x": 960, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 11.aseprite": {
+    "frame": { "x": 1056, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 12.aseprite": {
+    "frame": { "x": 1152, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 13.aseprite": {
+    "frame": { "x": 1248, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 14.aseprite": {
+    "frame": { "x": 1344, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 15.aseprite": {
+    "frame": { "x": 1440, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 16.aseprite": {
+    "frame": { "x": 1536, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 17.aseprite": {
+    "frame": { "x": 1632, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 18.aseprite": {
+    "frame": { "x": 1728, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 19.aseprite": {
+    "frame": { "x": 1824, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 20.aseprite": {
+    "frame": { "x": 1920, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 21.aseprite": {
+    "frame": { "x": 2016, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 22.aseprite": {
+    "frame": { "x": 2112, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 23.aseprite": {
+    "frame": { "x": 2208, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 24.aseprite": {
+    "frame": { "x": 2304, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 25.aseprite": {
+    "frame": { "x": 2400, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 26.aseprite": {
+    "frame": { "x": 2496, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 27.aseprite": {
+    "frame": { "x": 2592, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 28.aseprite": {
+    "frame": { "x": 2688, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 29.aseprite": {
+    "frame": { "x": 2784, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 30.aseprite": {
+    "frame": { "x": 2880, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 31.aseprite": {
+    "frame": { "x": 2976, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 32.aseprite": {
+    "frame": { "x": 3072, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 33.aseprite": {
+    "frame": { "x": 3168, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 34.aseprite": {
+    "frame": { "x": 3264, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 35.aseprite": {
+    "frame": { "x": 3360, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 36.aseprite": {
+    "frame": { "x": 3456, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 37.aseprite": {
+    "frame": { "x": 3552, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 38.aseprite": {
+    "frame": { "x": 3648, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 39.aseprite": {
+    "frame": { "x": 3744, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 40.aseprite": {
+    "frame": { "x": 3840, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   },
+   "12-Lives and Coins 41.aseprite": {
+    "frame": { "x": 3936, "y": 0, "w": 96, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 },
+    "sourceSize": { "w": 96, "h": 96 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.27-dev",
+  "format": "RGBA8888",
+  "size": { "w": 4032, "h": 96 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Live Bar", "from": 0, "to": 0, "direction": "forward" },
+   { "name": "Small Heart", "from": 1, "to": 10, "direction": "forward" },
+   { "name": "Idle", "from": 1, "to": 8, "direction": "forward" },
+   { "name": "Hit", "from": 9, "to": 10, "direction": "forward" },
+   { "name": "Big Heart", "from": 11, "to": 20, "direction": "forward" },
+   { "name": "Idle", "from": 11, "to": 18, "direction": "forward" },
+   { "name": "Collected", "from": 19, "to": 20, "direction": "forward" },
+   { "name": "Small Diamod", "from": 21, "to": 28, "direction": "forward" },
+   { "name": "Big Diamond", "from": 29, "to": 40, "direction": "forward" },
+   { "name": "Idle", "from": 29, "to": 38, "direction": "forward" },
+   { "name": "Collected", "from": 39, "to": 40, "direction": "forward" },
+   { "name": "Numbers", "from": 41, "to": 41, "direction": "forward" }
+  ],
+  "layers": [
+   { "name": "BG", "opacity": 255, "blendMode": "normal" },
+   { "name": "Cannon", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

@@ -1,0 +1,96 @@
+{ "frames": {
+   "06-PigHide 0.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "06-PigHide 1.aseprite": {
+    "frame": { "x": 80, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "06-PigHide 2.aseprite": {
+    "frame": { "x": 160, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "06-PigHide 3.aseprite": {
+    "frame": { "x": 240, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "06-PigHide 4.aseprite": {
+    "frame": { "x": 320, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "06-PigHide 5.aseprite": {
+    "frame": { "x": 400, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "06-PigHide 6.aseprite": {
+    "frame": { "x": 480, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "06-PigHide 7.aseprite": {
+    "frame": { "x": 560, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   },
+   "06-PigHide 8.aseprite": {
+    "frame": { "x": 640, "y": 0, "w": 80, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+    "sourceSize": { "w": 80, "h": 80 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.27-dev",
+  "format": "RGBA8888",
+  "size": { "w": 720, "h": 80 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Looking out", "from": 0, "to": 2, "direction": "forward" },
+   { "name": "Jump", "from": 3, "to": 8, "direction": "forward" },
+   { "name": "Anticipation", "from": 3, "to": 4, "direction": "forward" },
+   { "name": "Jump", "from": 5, "to": 6, "direction": "forward" },
+   { "name": "Fall", "from": 7, "to": 7, "direction": "forward" },
+   { "name": "Ground", "from": 8, "to": 8, "direction": "forward" }
+  ],
+  "layers": [
+   { "name": "Fondo", "opacity": 255, "blendMode": "normal" },
+   { "name": "Dibujo", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

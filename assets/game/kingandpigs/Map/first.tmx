@@ -5,7 +5,7 @@
   <export target="first.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="Terrain(32x32)" tilewidth="32" tileheight="32" tilecount="247" columns="19">
-  <image source="Terrain (32x32).png" width="608" height="416"/>
+  <image source="Terrain(32x32).png" width="608" height="416"/>
   <tile id="59">
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="32" height="32"/>

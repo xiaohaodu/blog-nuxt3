@@ -5,29 +5,18 @@ interface Cursorswasd {
     S?: Phaser.Input.Keyboard.Key,
     D?: Phaser.Input.Keyboard.Key
 }
-class King extends Phaser.Physics.Matter.Sprite {
+class King extends Phaser.Physics.Arcade.Sprite {
     private cursors?: Phaser.Types.Input.Keyboard.CursorKeys;
     private cursorswasd?: Cursorswasd;
     private speed = 4!;
-    constructor(scene: Phaser.Scene, x: number, y: number, texture: string | Phaser.Textures.Texture, frame?: string | number | undefined, options?: Phaser.Types.Physics.Matter.MatterBodyConfig | undefined) {
-        super(scene.matter.world, x, y, texture, frame, options = {
-            shape: { width: 40, height: 40 },
-            frictionAir: 0,
-            friction: 0,
-            frictionStatic: 0,
-        });
-        scene.add.existing(this);
-        this.setFriction(0)
-        this.setFrictionAir(0)
-        this.setFrictionStatic(0)
-        this.setBounce(0);
-        this.setVelocity(0)
-        this.setFixedRotation();
+    constructor(scene: Phaser.Scene, x: number, y: number, texture: string | Phaser.Textures.Texture, frame?: string | number | undefined) {
+        super(scene, x, y, texture, frame);
+        scene.physics.add.existing(this)
         this.cursors = scene.input.keyboard?.createCursorKeys();
         this.cursorswasd = { ...scene.input.keyboard?.addKeys('W,S,A,D') };
     }
     update() {
-        this.setVelocity(0);
+        // this.setVelocity(0);
         if (this.cursors?.left.isDown || this.cursorswasd?.A?.isDown) {
             this.setVelocityX(-this.speed);
         }

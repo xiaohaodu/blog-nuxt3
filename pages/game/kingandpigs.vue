@@ -15,16 +15,10 @@ onMounted(() => {
         parent: kingAndPigs.value,
         pixelArt: true,
         physics: {
-            default: 'matter',
-            matter: {
-                debug: true,
-                gravity: { y: 50 },
-                setBounds: {
-                    left: true,
-                    right: true,
-                    top: true,
-                    bottom: true
-                }
+            default: 'arcade',
+            arcade: {
+                gravity: { y: 300 },
+                debug: true
             }
         },
         scaleMode: 3,

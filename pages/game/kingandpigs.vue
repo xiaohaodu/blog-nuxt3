@@ -4,8 +4,8 @@
 
 <script setup>
 import Phaser from 'phaser';
-import { BootScene } from '~/assets/game/kingandpigs/BootScene';
-import { GameStart } from '~/assets/game/kingandpigs/GameStart';
+import BootScene from '~/assets/game/kingandpigs/Scene/BootScene';
+import GameStart from '~/assets/game/kingandpigs/Scene/GameStart';
 const kingAndPigs = ref(null);
 let config;
 let game;

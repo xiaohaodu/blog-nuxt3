@@ -437,9 +437,8 @@
    { "name": "kingAttack", "from": 22, "to": 24, "direction": "forward" },
    { "name": "kingHit", "from": 25, "to": 26, "direction": "forward" },
    { "name": "kingDead", "from": 27, "to": 30, "direction": "forward" },
-   { "name": "kingDoor", "from": 31, "to": 46, "direction": "forward" },
-   { "name": "In", "from": 31, "to": 38, "direction": "forward" },
-   { "name": "Out", "from": 39, "to": 46, "direction": "forward" }
+   { "name": "kingDoorIn", "from": 31, "to": 38, "direction": "forward" },
+   { "name": "kingDoorOut", "from": 39, "to": 46, "direction": "forward" }
   ],
   "layers": [
    { "name": "Dibujo", "opacity": 255, "blendMode": "normal" }

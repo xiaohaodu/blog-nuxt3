@@ -1,5 +1,6 @@
-{ "frames": {
-   "04-PigBox 0.aseprite": {
+{ "frames": [
+   {
+    "filename": "0",
     "frame": { "x": 0, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -7,7 +8,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 1.aseprite": {
+   {
+    "filename": "1",
     "frame": { "x": 80, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -15,7 +17,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 2.aseprite": {
+   {
+    "filename": "2",
     "frame": { "x": 160, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -23,7 +26,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 3.aseprite": {
+   {
+    "filename": "3",
     "frame": { "x": 240, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -31,7 +35,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 4.aseprite": {
+   {
+    "filename": "4",
     "frame": { "x": 320, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -39,7 +44,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 5.aseprite": {
+   {
+    "filename": "5",
     "frame": { "x": 400, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -47,7 +53,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 6.aseprite": {
+   {
+    "filename": "6",
     "frame": { "x": 480, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -55,7 +62,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 7.aseprite": {
+   {
+    "filename": "7",
     "frame": { "x": 560, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -63,7 +71,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 8.aseprite": {
+   {
+    "filename": "8",
     "frame": { "x": 640, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -71,7 +80,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 9.aseprite": {
+   {
+    "filename": "9",
     "frame": { "x": 720, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -79,7 +89,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 10.aseprite": {
+   {
+    "filename": "10",
     "frame": { "x": 800, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -87,7 +98,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 11.aseprite": {
+   {
+    "filename": "11",
     "frame": { "x": 880, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -95,7 +107,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 12.aseprite": {
+   {
+    "filename": "12",
     "frame": { "x": 960, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -103,7 +116,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 13.aseprite": {
+   {
+    "filename": "13",
     "frame": { "x": 1040, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -111,7 +125,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 14.aseprite": {
+   {
+    "filename": "14",
     "frame": { "x": 1120, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -119,7 +134,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 15.aseprite": {
+   {
+    "filename": "15",
     "frame": { "x": 1200, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -127,7 +143,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 16.aseprite": {
+   {
+    "filename": "16",
     "frame": { "x": 1280, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -135,7 +152,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 17.aseprite": {
+   {
+    "filename": "17",
     "frame": { "x": 1360, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -143,7 +161,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 18.aseprite": {
+   {
+    "filename": "18",
     "frame": { "x": 1440, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -151,7 +170,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 19.aseprite": {
+   {
+    "filename": "19",
     "frame": { "x": 1520, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -159,7 +179,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 20.aseprite": {
+   {
+    "filename": "20",
     "frame": { "x": 1600, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -167,7 +188,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 21.aseprite": {
+   {
+    "filename": "21",
     "frame": { "x": 1680, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -175,7 +197,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 22.aseprite": {
+   {
+    "filename": "22",
     "frame": { "x": 1760, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -183,7 +206,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 23.aseprite": {
+   {
+    "filename": "23",
     "frame": { "x": 1840, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -191,7 +215,8 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    },
-   "04-PigBox 24.aseprite": {
+   {
+    "filename": "24",
     "frame": { "x": 1920, "y": 0, "w": 80, "h": 80 },
     "rotated": false,
     "trimmed": false,
@@ -199,7 +224,7 @@
     "sourceSize": { "w": 80, "h": 80 },
     "duration": 100
    }
- },
+ ],
  "meta": {
   "app": "http://www.aseprite.org/",
   "version": "1.2.27-dev",
@@ -208,10 +233,10 @@
   "size": { "w": 2000, "h": 80 },
   "scale": "1",
   "frameTags": [
-   { "name": "Picking Box", "from": 0, "to": 4, "direction": "forward" },
-   { "name": "Idle", "from": 5, "to": 13, "direction": "forward" },
-   { "name": "Run", "from": 14, "to": 19, "direction": "forward" },
-   { "name": "Throwing Box", "from": 20, "to": 24, "direction": "forward" }
+   { "name": "PickingBox", "from": 0, "to": 4, "direction": "forward" },
+   { "name": "pigBoxIdle", "from": 5, "to": 13, "direction": "forward" },
+   { "name": "pigBoxRun", "from": 14, "to": 19, "direction": "forward" },
+   { "name": "ThrowingBox", "from": 20, "to": 24, "direction": "forward" }
   ],
   "layers": [
    { "name": "Pig", "opacity": 255, "blendMode": "normal" }

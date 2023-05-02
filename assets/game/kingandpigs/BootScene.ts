@@ -19,6 +19,9 @@ import kingPigSpritesheet from '@/assets/game/kingandpigs/AsepriteJson/07-KingPi
 import bombSpritesheet from '@/assets/game/kingandpigs/AsepriteJson/08-Bomb.json'
 import boxSpritesheet from '@/assets/game/kingandpigs/AsepriteJson/09-Box.json'
 
+import livesAndCoinsSheet from '@/assets/game/kingandpigs/AsepriteSheet/12-Lives and Coins.png'
+import livesAndCoinsSheetJson from '@/assets/game/kingandpigs/AsepriteJson/12-Lives and Coins.json'
+
 class BootScene extends Phaser.Scene {
     constructor() {
         super('BootScene');
@@ -39,10 +42,14 @@ class BootScene extends Phaser.Scene {
         //aseprite
         this.load.aseprite('kingsheet', kingSpritesheet, kingSpritesheetJson)
         this.load.aseprite('pigsheet', pigSpritesheet, pigSpritesheetJson)
+        this.load.aseprite('livesAndCoinsSheet', livesAndCoinsSheet, livesAndCoinsSheetJson)
+        console.log(this.textures);
 
     }
     create() {
-
+        this.anims.createFromAseprite('kingsheet')
+        this.anims.createFromAseprite('pigsheet')
+        this.anims.createFromAseprite('livesAndCoinsSheet')
     }
 }
 

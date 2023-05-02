@@ -13,6 +13,8 @@ onMounted(() => {
     config = {
         type: Phaser.AUTO,
         parent: kingAndPigs.value,
+        height: 640,
+        width: 960,
         pixelArt: true,
         physics: {
             default: 'arcade',

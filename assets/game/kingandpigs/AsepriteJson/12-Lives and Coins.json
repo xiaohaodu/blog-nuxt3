@@ -1,5 +1,6 @@
-{ "frames": {
-   "12-Lives and Coins 0.aseprite": {
+{ "frames": [
+   {
+    "filename": "0",
     "frame": { "x": 0, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -7,7 +8,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 1.aseprite": {
+   {
+    "filename": "1",
     "frame": { "x": 96, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -15,7 +17,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 2.aseprite": {
+   {
+    "filename": "2",
     "frame": { "x": 192, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -23,7 +26,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 3.aseprite": {
+   {
+    "filename": "3",
     "frame": { "x": 288, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -31,7 +35,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 4.aseprite": {
+   {
+    "filename": "4",
     "frame": { "x": 384, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -39,7 +44,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 5.aseprite": {
+   {
+    "filename": "5",
     "frame": { "x": 480, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -47,7 +53,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 6.aseprite": {
+   {
+    "filename": "6",
     "frame": { "x": 576, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -55,7 +62,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 7.aseprite": {
+   {
+    "filename": "7",
     "frame": { "x": 672, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -63,7 +71,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 8.aseprite": {
+   {
+    "filename": "8",
     "frame": { "x": 768, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -71,7 +80,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 9.aseprite": {
+   {
+    "filename": "9",
     "frame": { "x": 864, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -79,7 +89,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 10.aseprite": {
+   {
+    "filename": "10",
     "frame": { "x": 960, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -87,7 +98,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 11.aseprite": {
+   {
+    "filename": "11",
     "frame": { "x": 1056, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -95,7 +107,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 12.aseprite": {
+   {
+    "filename": "12",
     "frame": { "x": 1152, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -103,7 +116,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 13.aseprite": {
+   {
+    "filename": "13",
     "frame": { "x": 1248, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -111,7 +125,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 14.aseprite": {
+   {
+    "filename": "14",
     "frame": { "x": 1344, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -119,7 +134,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 15.aseprite": {
+   {
+    "filename": "15",
     "frame": { "x": 1440, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -127,7 +143,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 16.aseprite": {
+   {
+    "filename": "16",
     "frame": { "x": 1536, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -135,7 +152,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 17.aseprite": {
+   {
+    "filename": "17",
     "frame": { "x": 1632, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -143,7 +161,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 18.aseprite": {
+   {
+    "filename": "18",
     "frame": { "x": 1728, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -151,7 +170,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 19.aseprite": {
+   {
+    "filename": "19",
     "frame": { "x": 1824, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -159,7 +179,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 20.aseprite": {
+   {
+    "filename": "20",
     "frame": { "x": 1920, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -167,7 +188,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 21.aseprite": {
+   {
+    "filename": "21",
     "frame": { "x": 2016, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -175,7 +197,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 22.aseprite": {
+   {
+    "filename": "22",
     "frame": { "x": 2112, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -183,7 +206,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 23.aseprite": {
+   {
+    "filename": "23",
     "frame": { "x": 2208, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -191,7 +215,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 24.aseprite": {
+   {
+    "filename": "24",
     "frame": { "x": 2304, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -199,7 +224,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 25.aseprite": {
+   {
+    "filename": "25",
     "frame": { "x": 2400, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -207,7 +233,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 26.aseprite": {
+   {
+    "filename": "26",
     "frame": { "x": 2496, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -215,7 +242,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 27.aseprite": {
+   {
+    "filename": "27",
     "frame": { "x": 2592, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -223,7 +251,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 28.aseprite": {
+   {
+    "filename": "28",
     "frame": { "x": 2688, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -231,7 +260,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 29.aseprite": {
+   {
+    "filename": "29",
     "frame": { "x": 2784, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -239,7 +269,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 30.aseprite": {
+   {
+    "filename": "30",
     "frame": { "x": 2880, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -247,7 +278,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 31.aseprite": {
+   {
+    "filename": "31",
     "frame": { "x": 2976, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -255,7 +287,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 32.aseprite": {
+   {
+    "filename": "32",
     "frame": { "x": 3072, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -263,7 +296,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 33.aseprite": {
+   {
+    "filename": "33",
     "frame": { "x": 3168, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -271,7 +305,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 34.aseprite": {
+   {
+    "filename": "34",
     "frame": { "x": 3264, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -279,7 +314,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 35.aseprite": {
+   {
+    "filename": "35",
     "frame": { "x": 3360, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -287,7 +323,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 36.aseprite": {
+   {
+    "filename": "36",
     "frame": { "x": 3456, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -295,7 +332,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 37.aseprite": {
+   {
+    "filename": "37",
     "frame": { "x": 3552, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -303,7 +341,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 38.aseprite": {
+   {
+    "filename": "38",
     "frame": { "x": 3648, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -311,7 +350,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 39.aseprite": {
+   {
+    "filename": "39",
     "frame": { "x": 3744, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -319,7 +359,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 40.aseprite": {
+   {
+    "filename": "40",
     "frame": { "x": 3840, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -327,7 +368,8 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    },
-   "12-Lives and Coins 41.aseprite": {
+   {
+    "filename": "41",
     "frame": { "x": 3936, "y": 0, "w": 96, "h": 96 },
     "rotated": false,
     "trimmed": false,
@@ -335,29 +377,26 @@
     "sourceSize": { "w": 96, "h": 96 },
     "duration": 100
    }
- },
+ ],
  "meta": {
   "app": "http://www.aseprite.org/",
   "version": "1.2.27-dev",
+  "image": "12-Lives and Coins.png",
   "format": "RGBA8888",
   "size": { "w": 4032, "h": 96 },
   "scale": "1",
   "frameTags": [
    { "name": "Live Bar", "from": 0, "to": 0, "direction": "forward" },
-   { "name": "Small Heart", "from": 1, "to": 10, "direction": "forward" },
-   { "name": "Idle", "from": 1, "to": 8, "direction": "forward" },
-   { "name": "Hit", "from": 9, "to": 10, "direction": "forward" },
-   { "name": "Big Heart", "from": 11, "to": 20, "direction": "forward" },
-   { "name": "Idle", "from": 11, "to": 18, "direction": "forward" },
-   { "name": "Collected", "from": 19, "to": 20, "direction": "forward" },
-   { "name": "Small Diamod", "from": 21, "to": 28, "direction": "forward" },
-   { "name": "Big Diamond", "from": 29, "to": 40, "direction": "forward" },
-   { "name": "Idle", "from": 29, "to": 38, "direction": "forward" },
-   { "name": "Collected", "from": 39, "to": 40, "direction": "forward" },
+   { "name": "smallHeartIdle", "from": 1, "to": 8, "direction": "forward" },
+   { "name": "smallHeartHit", "from": 9, "to": 10, "direction": "forward" },
+   { "name": "bigHeartIdle", "from": 11, "to": 18, "direction": "forward" },
+   { "name": "bigHeartCollected", "from": 19, "to": 20, "direction": "forward" },
+   { "name": "smallDiamodIdle", "from": 21, "to": 28, "direction": "forward" },
+   { "name": "bigDiamondIdle", "from": 29, "to": 38, "direction": "forward" },
+   { "name": "bigDiamondCollected", "from": 39, "to": 40, "direction": "forward" },
    { "name": "Numbers", "from": 41, "to": 41, "direction": "forward" }
   ],
   "layers": [
-   { "name": "BG", "opacity": 255, "blendMode": "normal" },
    { "name": "Cannon", "opacity": 255, "blendMode": "normal" }
   ],
   "slices": [

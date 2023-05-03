@@ -53,9 +53,6 @@ class Pig extends Phaser.Physics.Arcade.Sprite {
     getIsDead() {
         return this.isDead;
     }
-    setIsDead(isDead: boolean) {
-        this.isDead = isDead;
-    }
     dead() {
         if (!this.isDead) {
             this.isDead = true;

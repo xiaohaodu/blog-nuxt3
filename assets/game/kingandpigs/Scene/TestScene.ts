@@ -4,10 +4,12 @@ class TestScene extends Phaser.Scene {
     constructor() {
         super('TestScene');
     }
+    private gameManage!: GameManage;
     create() {
-        const gameManage = new GameManage(this, 100, 100, 'livesAndCoinsSheet', 0);
-        console.log(gameManage);
-        const hh = this.add.sprite(300, 300, 'livesAndCoinsSheet', 0);
+        this.gameManage = new GameManage(this, 100, 100, 'livesAndCoinsSheet', 0);
+    }
+    update() {
+        this.gameManage.update();
     }
 }
 export default TestScene;

@@ -391,7 +391,7 @@
    { "name": "smallHeartHit", "from": 9, "to": 10, "direction": "forward" },
    { "name": "bigHeartIdle", "from": 11, "to": 18, "direction": "forward" },
    { "name": "bigHeartCollected", "from": 19, "to": 20, "direction": "forward" },
-   { "name": "smallDiamodIdle", "from": 21, "to": 28, "direction": "forward" },
+   { "name": "smallDiamondIdle", "from": 21, "to": 28, "direction": "forward" },
    { "name": "bigDiamondIdle", "from": 29, "to": 38, "direction": "forward" },
    { "name": "bigDiamondCollected", "from": 39, "to": 40, "direction": "forward" },
    { "name": "Numbers", "from": 41, "to": 41, "direction": "forward" }

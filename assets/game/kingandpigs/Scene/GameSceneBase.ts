@@ -14,12 +14,12 @@ class GameSceneBase extends Phaser.Scene {
         x: 0,
         y: 0
     };
-    protected pigs!: Pig[];
-    protected coins!: Coin[];
-    protected fromDoor!: Door;
-    protected toDoor!: Door;
+    protected pigs?: Pig[];
+    protected coins?: Coin[];
+    protected fromDoor?: Door;
+    protected toDoor?: Door;
     protected gameManage!: GameManage;
-    protected tipText!: Phaser.GameObjects.Text;
+    protected tipText?: Phaser.GameObjects.Text;
     createBase() {
         const map = this.make.tilemap({ key: 'MapBegin' });
         const tilesheet = map.addTilesetImage('Terrain(32x32)', 'Terrain', 32, 32)!;
@@ -83,14 +83,14 @@ class GameSceneBase extends Phaser.Scene {
             const chackCoin = coin as Coin;
             chackCoin.diamondCollected();
             this.gameManage.addCoins();
-            const index = this.coins.findIndex(ele => ele === chackCoin);
-            this.coins.splice(index, 1);
+            const index = this.coins!.findIndex(ele => ele === chackCoin);
+            this.coins?.splice(index, 1);
         });
         this.physics.add.overlap(this.king, this.toDoor, () => {
-            const pass = !this.pigs.filter(pig => !pig.getIsDead()).length;
+            const pass = !this.pigs?.filter(pig => !pig.getIsDead()).length;
             if (this.king.cursors?.space.isDown && pass) {
                 this.king.inDoor();
-                this.toDoor.close();
+                this.toDoor?.close();
             }
         });
         this.cameras.main.startFollow(this.king);
@@ -100,12 +100,12 @@ class GameSceneBase extends Phaser.Scene {
         this.tipText = this.add.text(35, 40, 'w a s d / ↑ ↓ ← →  控制king移动\nspace 控制国王攻击和进入下一关', { fontFamily: 'Arial', fontSize: 12, color: '#ffffff' }).setPosition(this.king.x, this.king.y - 50).setOrigin(0.5, 0.5);
     }
     updateBase() {
-        this.tipText.setPosition(this.king.x, this.king.y - 50);
+        this.tipText?.setPosition(this.king.x, this.king.y - 50);
         this.king.update();
-        this.pigs.forEach(pig => {
+        this.pigs?.forEach(pig => {
             pig.update();
         });
-        this.coins.forEach(coin => {
+        this.coins?.forEach(coin => {
             coin.update();
         });
         this.gameManage.update();

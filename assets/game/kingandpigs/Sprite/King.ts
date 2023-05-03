@@ -23,9 +23,11 @@ class King extends Phaser.Physics.Arcade.Sprite {
         this.on('animationcomplete', (animation: Phaser.Animations.Animation) => {
             if (animation.key == 'kingAttack') {
                 this.isAttack = false;
+                this.isActive = false;
             }
             if (animation.key == 'kingDoorOut' || animation.key == 'kingDoorIn') {
-                this.isActive = true;
+                this.isActive = false;
+                this.isAttack = false;
             }
         });
         this.rangeAttack = scene.add.zone(this.x + 32, this.y, 16, 16);
@@ -39,7 +41,7 @@ class King extends Phaser.Physics.Arcade.Sprite {
         }, true);
     }
     inDoor() {
-        this.isActive = false;
+        this.isActive = true;
         this.anims.play({
             key: 'kingDoorIn',
             repeat: 0
@@ -56,7 +58,7 @@ class King extends Phaser.Physics.Arcade.Sprite {
     }
     update() {
         this.setVelocityX(0);
-        if (!this.isDead && this.isActive) {
+        if (!this.isDead && !this.isActive && !this.isAttack) {
             if (this.flipX) {
                 this.rangeAttack.x = this.x - 32;
                 this.rangeAttack.y = this.y;
@@ -89,14 +91,10 @@ class King extends Phaser.Physics.Arcade.Sprite {
         }
     }
     idle() {
-        if (!this.isAttack) {
-            this.anims.play({ key: 'kingIdle', repeat: -1 }, true);
-        }
+        this.anims.play({ key: 'kingIdle', repeat: -1 }, true);
     }
     run() {
-        if (!this.isAttack) {
-            this.anims.play({ key: 'kingRun', repeat: -1 }, true);
-        }
+        this.anims.play({ key: 'kingRun', repeat: -1 }, true);
     }
     jump() {
         if (this.body!.velocity.y < 0) {
@@ -116,7 +114,9 @@ class King extends Phaser.Physics.Arcade.Sprite {
         }
     }
     attack() {
-        if (this.cursors?.space.isDown && (this.body! as Phaser.Physics.Arcade.Body).onFloor() && !this.isAttack) {
+        if (this.cursors?.space.isDown && (this.body! as Phaser.Physics.Arcade.Body).onFloor()) {
+            console.log(this.isActive, this.isDead);
+
             this.isAttack = true;
             this.anims.play({
                 key: 'kingAttack',

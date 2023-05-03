@@ -40,8 +40,8 @@ class BootScene extends Phaser.Scene {
             console.log(value);
         });
         this.load.on('complete', () => {
-            this.scene.start('GameStart');
-            // this.scene.start('TestScene');
+            // this.scene.start('GameStart');
+            this.scene.start('TestScene');
         });
 
         //mapimg

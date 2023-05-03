@@ -6,10 +6,10 @@ interface Cursorswasd {
     D?: Phaser.Input.Keyboard.Key;
 }
 class Pig extends Phaser.Physics.Arcade.Sprite {
-    private cursors?: Phaser.Types.Input.Keyboard.CursorKeys;
-    private cursorswasd?: Cursorswasd;
-    private speed: number = 70;
-    private isDead: boolean = false;
+    protected cursors?: Phaser.Types.Input.Keyboard.CursorKeys;
+    protected cursorswasd?: Cursorswasd;
+    protected speed: number = 70;
+    protected isDead: boolean = false;
     constructor(scene: Phaser.Scene, x: number, y: number, texture: string | Phaser.Textures.Texture = 'pigsheet', frame: string | number | undefined = 0) {
         super(scene, x, y, texture, frame);
         scene.add.existing(this);

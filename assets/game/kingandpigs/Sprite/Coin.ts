@@ -1,6 +1,6 @@
 import Phaser from "phaser";
 class Coin extends Phaser.Physics.Arcade.Sprite {
-    private isDiamonHit: boolean = false;
+    protected isDiamonHit: boolean = false;
     isBigDiamon: boolean = true;
     constructor(scene: Phaser.Scene, isBigDiamon: boolean = true, x: number = 0, y: number = 0, frame: string | number | undefined = 29, height: number = 12, width: number = 12, texture: string | Phaser.Textures.Texture = 'livesAndCoinsSheet') {
         super(scene, x, y, texture, frame);

@@ -7,8 +7,8 @@ interface Coins {
     num: number;
 }
 class GameManage extends Phaser.Physics.Arcade.Sprite {
-    private lives: Live[] = [];
-    private coins!: Coins;
+    protected lives: Live[] = [];
+    protected coins!: Coins;
     constructor(scene: Phaser.Scene, x: number = 35, y: number = 18, texture: string | Phaser.Textures.Texture = 'livesAndCoinsSheet', frame: string | number | undefined = 0) {
         super(scene, x, y, texture, frame);
         scene.add.existing(this);

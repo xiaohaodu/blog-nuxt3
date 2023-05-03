@@ -7,12 +7,12 @@ interface Cursorswasd {
 }
 class King extends Phaser.Physics.Arcade.Sprite {
     cursors?: Phaser.Types.Input.Keyboard.CursorKeys;
-    private cursorswasd?: Cursorswasd;
-    private speed: number = 150;
-    private isAttack: boolean = false;
-    private rangeAttack: Phaser.GameObjects.Zone;
-    private isDead: boolean = false;
-    private isActive: boolean = false;
+    protected cursorswasd?: Cursorswasd;
+    protected speed: number = 150;
+    protected isAttack: boolean = false;
+    protected rangeAttack: Phaser.GameObjects.Zone;
+    protected isDead: boolean = false;
+    protected isActive: boolean = false;
     constructor(scene: Phaser.Scene, x: number = 0, y: number = 0, texture: string | Phaser.Textures.Texture = 'kingsheet', frame: string | number | undefined = 0) {
         super(scene, x, y, texture, frame);
         scene.add.existing(this);

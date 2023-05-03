@@ -6,8 +6,8 @@ class GameScene extends Phaser.Scene {
     constructor() {
         super('game');
     }
-    private me!: Me;
-    private car!: Car;
+    protected me!: Me;
+    protected car!: Car;
     create() {
         const map = this.make.tilemap({ key: 'mapfantasy' });
         const tileSheet = map.addTilesetImage('sheet', 'mapspritesheet', 16, 16, 0, 1);

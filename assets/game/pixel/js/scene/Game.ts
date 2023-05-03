@@ -4,7 +4,7 @@ class Game extends Phaser.Scene {
     constructor() {
         super('gamescene');
     }
-    private greenObject!: GreenObject;
+    protected greenObject!: GreenObject;
     create() {
         console.log('game start');
         const map = this.make.tilemap({ key: 'map' });

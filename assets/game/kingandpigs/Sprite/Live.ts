@@ -1,6 +1,6 @@
 import Phaser from "phaser";
 class Live extends Phaser.Physics.Arcade.Sprite {
-    private isHeartHit: boolean = false;
+    protected isHeartHit: boolean = false;
     isBigHeart: boolean = true;
     constructor(scene: Phaser.Scene, isBigHeart: boolean = true, x: number = 0, y: number = 0, frame: string | number | undefined = 11, height: number = 10, width: number = 10, texture: string | Phaser.Textures.Texture = 'livesAndCoinsSheet') {
         super(scene, x, y, texture, frame);

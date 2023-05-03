@@ -3,12 +3,12 @@ interface Cursorswasd {
     W?: Phaser.Input.Keyboard.Key,
     A?: Phaser.Input.Keyboard.Key,
     S?: Phaser.Input.Keyboard.Key,
-    D?: Phaser.Input.Keyboard.Key
+    D?: Phaser.Input.Keyboard.Key;
 }
 class Me extends Phaser.Physics.Matter.Sprite {
-    private cursors?: Phaser.Types.Input.Keyboard.CursorKeys;
-    private cursorswasd?: Cursorswasd;
-    private speed = 4!;
+    protected cursors?: Phaser.Types.Input.Keyboard.CursorKeys;
+    protected cursorswasd?: Cursorswasd;
+    protected speed = 4!;
     constructor(scene: Phaser.Scene, x: number, y: number, texture: string | Phaser.Textures.Texture, frame?: string | number | undefined, options?: Phaser.Types.Physics.Matter.MatterBodyConfig | undefined) {
         super(scene.matter.world, x, y, texture, frame, options = {
             shape: { width: 40, height: 40 },

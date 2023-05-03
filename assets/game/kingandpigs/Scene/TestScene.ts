@@ -4,7 +4,7 @@ class TestScene extends Phaser.Scene {
     constructor() {
         super('TestScene');
     }
-    private gameManage!: GameManage;
+    protected gameManage!: GameManage;
     create() {
         this.gameManage = new GameManage(this, 100, 100, 'livesAndCoinsSheet', 0);
     }

@@ -13,8 +13,8 @@ class King extends Phaser.Physics.Arcade.Sprite {
     private rangeAttack: Phaser.GameObjects.Zone;
     private isDead: boolean = false;
     private isActive: boolean = false;
-    constructor(scene: Phaser.Scene, x?: number, y?: number, texture?: string | Phaser.Textures.Texture, frame?: string | number | undefined) {
-        super(scene, x = 0, y = 0, texture = 'kingsheet', frame = 0);
+    constructor(scene: Phaser.Scene, x: number = 0, y: number = 0, texture: string | Phaser.Textures.Texture = 'kingsheet', frame: string | number | undefined = 0) {
+        super(scene, x, y, texture, frame);
         scene.physics.add.existing(this);
         this.setSize(20, 30);
         this.cursors = scene.input.keyboard?.createCursorKeys();

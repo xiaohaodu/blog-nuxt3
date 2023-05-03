@@ -6,6 +6,7 @@
 import Phaser from 'phaser';
 import BootScene from '~/assets/game/kingandpigs/Scene/BootScene';
 import GameStart from '~/assets/game/kingandpigs/Scene/GameStart';
+import TestScene from '~/assets/game/kingandpigs/Scene/TestScene';
 const kingAndPigs = ref(null);
 let config;
 let game;
@@ -24,7 +25,7 @@ onMounted(() => {
             }
         },
         scaleMode: 4,
-        scene: [BootScene, GameStart]
+        scene: [BootScene, GameStart, TestScene]
     };
     game = new Phaser.Game(config);
     window.focus();

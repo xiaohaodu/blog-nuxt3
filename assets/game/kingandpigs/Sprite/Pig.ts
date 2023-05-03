@@ -10,8 +10,8 @@ class Pig extends Phaser.Physics.Arcade.Sprite {
     private cursorswasd?: Cursorswasd;
     private speed: number = 70;
     private isDead: boolean = false;
-    constructor(scene: Phaser.Scene, x: number, y: number, texture: string | Phaser.Textures.Texture, frame?: string | number | undefined) {
-        super(scene, x, y, texture = 'pigsheet', frame = 0);
+    constructor(scene: Phaser.Scene, x: number, y: number, texture: string | Phaser.Textures.Texture = 'pigsheet', frame: string | number | undefined = 0) {
+        super(scene, x, y, texture, frame);
         scene.physics.add.existing(this);
         this.setSize(18, 18);
         this.cursors = scene.input.keyboard?.createCursorKeys();

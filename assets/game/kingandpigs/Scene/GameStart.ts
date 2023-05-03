@@ -3,6 +3,7 @@ import King from "../Sprite/King";
 import Pig from "../Sprite/Pig";
 import Coin from "../Sprite/Coin";
 import Door from "../Sprite/Door";
+import GameManage from "../GameManage";
 
 class GameStart extends Phaser.Scene {
     constructor() {

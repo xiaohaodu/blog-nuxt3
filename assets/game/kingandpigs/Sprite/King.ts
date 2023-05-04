@@ -115,8 +115,6 @@ class King extends Phaser.Physics.Arcade.Sprite {
     }
     attack() {
         if (this.cursors?.space.isDown && (this.body! as Phaser.Physics.Arcade.Body).onFloor()) {
-            console.log(this.isActive, this.isDead);
-
             this.isAttack = true;
             this.anims.play({
                 key: 'kingAttack',

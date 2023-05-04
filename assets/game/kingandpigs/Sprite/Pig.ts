@@ -10,6 +10,53 @@ class Pig extends Phaser.Physics.Arcade.Sprite {
     protected cursorswasd?: Cursorswasd;
     protected speed: number = 70;
     protected isDead: boolean = false;
+    protected typeTexture: { type: string; key: string; frame: number; height: number, width: number; offsetx: number, offsety: number; } = {
+        type: 'pig',
+        key: 'pigsheet',
+        frame: 0,
+        height: 18,
+        width: 18,
+        offsetx: 31,
+        offsety: 23
+    };
+    static readonly typeTexture = {
+        pig: {
+            type: 'pig',
+            key: 'pigsheet',
+            frame: 0,
+            width: 18,
+            height: 18,
+            offsetx: 31,
+            offsety: 31
+        },
+        pigKing: {
+            type: 'pigKing',
+            key: 'pigkingsheet',
+            frame: 0,
+            width: 18,
+            height: 20,
+            offsetx: 31,
+            offsety: 28
+        },
+        pigBox: {
+            type: 'pigBox',
+            key: 'pigboxsheet',
+            frame: 5,
+            width: 18,
+            height: 26,
+            offsetx: 31,
+            offsety: 23
+        },
+        pigBoom: {
+            type: 'pigBoom',
+            key: 'pigboomsheet',
+            frame: 4,
+            width: 20,
+            height: 18,
+            offsetx: 31,
+            offsety: 31
+        }
+    };
     constructor(scene: Phaser.Scene, x: number, y: number, texture: string | Phaser.Textures.Texture = 'pigsheet', frame: string | number | undefined = 0) {
         super(scene, x, y, texture, frame);
         scene.add.existing(this);
@@ -21,6 +68,12 @@ class Pig extends Phaser.Physics.Arcade.Sprite {
         this.on('animationcomplete', (animation: Phaser.Animations.Animation) => {
 
         });
+    }
+    setType(type: 'pig' | 'pigKing' | 'pigBoom' | 'pigBox') {
+        this.typeTexture = { ...Pig.typeTexture[type] };
+        this.setTexture(this.typeTexture.key, this.typeTexture.frame);
+        this.setSize(this.typeTexture.width, this.typeTexture.height);
+        this.setOffset(this.typeTexture.offsetx, this.typeTexture.offsety);
     }
     update() {
         if (!this.isDead) {
@@ -40,13 +93,13 @@ class Pig extends Phaser.Physics.Arcade.Sprite {
     }
     idle() {
         this.anims.play({
-            key: 'pigIdle',
+            key: `${this.typeTexture.type}Idle`,
             repeat: -1
         }, true);
     }
     run() {
         this.anims.play({
-            key: 'pigRun',
+            key: `${this.typeTexture.type}Run`,
             repeat: -1
         }, true);
     }
@@ -57,12 +110,11 @@ class Pig extends Phaser.Physics.Arcade.Sprite {
         if (!this.isDead) {
             this.isDead = true;
             this.anims.play({
-                key: 'pigDead',
+                key: `${this.typeTexture.type}Dead`,
                 repeat: 0
             }, true);
         }
     }
-
 }
 
 export default Pig;

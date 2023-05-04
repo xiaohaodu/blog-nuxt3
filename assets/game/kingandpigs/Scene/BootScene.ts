@@ -19,8 +19,13 @@ import pigBoxSpritesheetJson from '@/assets/game/kingandpigs/AsepriteJson/04-Pig
 import pigBoomSpritesheet from '@/assets/game/kingandpigs/AsepriteSheet/05-PigBoom.png';
 import pigBoomSpritesheetJson from '@/assets/game/kingandpigs/AsepriteJson/05-PigBoom.json';
 
-import pigHideSpritesheet from '@/assets/game/kingandpigs/AsepriteJson/06-PigHide.json';
-import kingPigSpritesheet from '@/assets/game/kingandpigs/AsepriteJson/07-KingPig.json';
+import pigHideSpritesheet from '@/assets/game/kingandpigs/AsepriteSheet/06-PigHide.png';
+import pigHideSpritesheetJson from '@/assets/game/kingandpigs/AsepriteJson/06-PigHide.json';
+
+
+import kingPigSpritesheet from '@/assets/game/kingandpigs/AsepriteSheet/07-KingPig.png';
+import kingPigSpritesheetJson from '@/assets/game/kingandpigs/AsepriteJson/07-KingPig.json';
+
 import bombSpritesheet from '@/assets/game/kingandpigs/AsepriteJson/08-Bomb.json';
 import boxSpritesheet from '@/assets/game/kingandpigs/AsepriteJson/09-Box.json';
 
@@ -56,6 +61,8 @@ class BootScene extends Phaser.Scene {
         this.load.aseprite('doorsheet', doorsheet, doorsheetJson);
         this.load.aseprite('pigboxsheet', pigBoxSpritesheet, pigBoxSpritesheetJson);
         this.load.aseprite('pigboomsheet', pigBoomSpritesheet, pigBoomSpritesheetJson);
+        this.load.aseprite('pighidesheet', pigHideSpritesheet, pigHideSpritesheetJson);
+        this.load.aseprite('pigkingsheet', kingPigSpritesheet, kingPigSpritesheetJson);
     }
     create() {
         this.anims.createFromAseprite('kingsheet');
@@ -64,6 +71,8 @@ class BootScene extends Phaser.Scene {
         this.anims.createFromAseprite('doorsheet');
         this.anims.createFromAseprite('pigboxsheet');
         this.anims.createFromAseprite('pigboomsheet');
+        this.anims.createFromAseprite('pighidesheet');
+        this.anims.createFromAseprite('pigkingsheet');
     }
 }
 

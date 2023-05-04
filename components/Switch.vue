@@ -26,10 +26,13 @@ const changeTheme = () => {
         link2.href = '/theme/github-block.css';
         window.document.documentElement.setAttribute('theme', 'light');
     }
+    localStorage.setItem('dataThemeNight', dataThemeNight.value.toString());
 };
 
 onMounted(() => {
     dataThemeNight.value = JSON.parse(localStorage.getItem('dataThemeNight') || 'false');
+    console.log(localStorage.getItem('dataThemeNight'));
+    console.log(dataThemeNight.value);
     link1 = document.createElement('link');
     link2 = document.createElement('link');
     if (dataThemeNight.value) {
@@ -57,10 +60,6 @@ onMounted(() => {
         document.getElementsByTagName("head")[0].appendChild(link2);
         window.document.documentElement.setAttribute('theme', 'light');
     }
-});
-
-onBeforeUnmount(() => {
-    localStorage.setItem('dataThemeNight', dataThemeNight.value.toString());
 });
 </script>
   

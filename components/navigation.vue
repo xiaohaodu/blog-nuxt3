@@ -19,9 +19,7 @@
                 <el-menu-item index="/game/dreamword">迷宫物语</el-menu-item>
                 <el-menu-item index="/game/kingandpigs">归来</el-menu-item>
             </el-sub-menu>
-            <el-menu-item>
-                <Switch></Switch>
-            </el-menu-item>
+            <Switch></Switch>
         </el-menu>
     </client-only>
 </template>

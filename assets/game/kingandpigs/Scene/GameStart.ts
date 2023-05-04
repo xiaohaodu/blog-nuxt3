@@ -11,7 +11,8 @@ class GameStart extends GameSceneBase {
         super('GameStart');
     }
     create() {
-        this.createBase();
+        this.createMapBase('MapBegin', { tilesetName: 'Terrain(32x32)', key: 'Terrain', tileHeight: 32, tileWidth: 32 }, { layerID: 'collider' }, 'bg');
+        this.createDoorAndKing();
     }
     update() {
         this.updateBase();

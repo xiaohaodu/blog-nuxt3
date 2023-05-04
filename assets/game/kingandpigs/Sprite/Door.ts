@@ -5,6 +5,7 @@ class Door extends Phaser.Physics.Arcade.Sprite {
         scene.add.existing(this);
         scene.physics.add.existing(this);
         this.setSize(48, 56);
+        (this.body as Phaser.Physics.Arcade.Body).setAllowGravity(false);
         this.setOffset(24, 25);
         this.on('animationcomplete', (animation: Phaser.Animations.Animation) => {
             if (animation.key == 'doorOpening') {

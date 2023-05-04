@@ -86,6 +86,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 #container {
+    padding-top: 60px;
     width: 100vw;
     height: 100vh;
     overflow: hidden;

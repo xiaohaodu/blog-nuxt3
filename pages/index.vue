@@ -1,9 +1,8 @@
 <template>
     <div>
-        <h1>
-            <div>这里什么都没有，去看看博客吧!</div>
-            <nuxt-link to="/blogs/README">to blogs</nuxt-link>
-        </h1>
+        <h2>
+            <div>这里什么都没有，去看看 <nuxt-link to="/blogs/README">博客</nuxt-link>吧!</div>
+        </h2>
     </div>
 </template>
 

@@ -1,8 +1,13 @@
 <template>
-    <span :class="dataThemeNight ? 'switch_open switch' : 'switch_close switch'" @click="changeTheme()">
-        <img class="switch__icon" src="@/assets/imgs/moon.svg" v-show="dataThemeNight">
-        <img class="switch__icon" src="@/assets/imgs/sun.svg" v-show="!dataThemeNight">
-    </span>
+    <div style="height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;" @click="changeTheme()">
+        <div :class="dataThemeNight ? 'switch_open switch' : 'switch_close switch'">
+            <img class="switch__icon" src="@/assets/imgs/moon.svg" v-show="dataThemeNight">
+            <img class="switch__icon" src="@/assets/imgs/sun.svg" v-show="!dataThemeNight">
+        </div>
+    </div>
 </template>
   
 <script setup>
@@ -62,7 +67,7 @@ onBeforeUnmount(() => {
 <style lang="scss" scoped>
 @keyframes open_to_close {
     0% {
-        left: 4.4vh;
+        left: 22px;
     }
 
     100% {
@@ -76,21 +81,15 @@ onBeforeUnmount(() => {
     }
 
     100% {
-        left: 4.4vh;
+        left: 22px;
     }
-}
-
-.switch {
-    transform: scale(0.7);
-    top: -3.6vh;
-    left: 1.2vw;
 }
 
 .switch_open {
     position: relative;
-    width: 8vh;
-    height: 4vh;
-    border-radius: 2vh;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
     background-color: #4a4b4d;
     cursor: pointer;
     display: flex;
@@ -100,10 +99,10 @@ onBeforeUnmount(() => {
     .switch__icon {
         position: absolute;
         border-width: 2px 2px 2px 2px;
-        width: 3.6vh;
-        height: 3.6vh;
-        left: 4.4vh;
-        border-radius: 1.8vh;
+        width: 18px;
+        height: 18px;
+        left: 22px;
+        border-radius: 9px;
         background-color: #141414;
         animation: close_to_open 0.3s;
     }
@@ -111,9 +110,9 @@ onBeforeUnmount(() => {
 
 .switch_close {
     position: relative;
-    width: 8vh;
-    height: 4vh;
-    border-radius: 2vh;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
     background-color: #f2f2f2;
     cursor: pointer;
     display: flex;
@@ -123,9 +122,9 @@ onBeforeUnmount(() => {
     .switch__icon {
         position: absolute;
         border-width: 2px 2px 2px 2px;
-        width: 3.6vh;
-        height: 3.6vh;
-        border-radius: 1.8vh;
+        width: 18px;
+        height: 18px;
+        border-radius: 9px;
         background-color: #ffffff;
         animation: open_to_close 0.3s;
     }

@@ -10,7 +10,6 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@element-plus/nuxt": "^1.0.4",
     "@types/dompurify": "^3.0.1",
     "@types/marked": "^4.0.8",
     "nuxt": "^3.3.3",
@@ -18,6 +17,7 @@
     "sass-loader": "^10.4.1"
   },
   "dependencies": {
+    "@element-plus/nuxt": "^1.0.4",
     "@nuxtjs/vercel-builder": "^0.24.0",
     "@types/three": "^0.150.1",
     "@vercel/node": "^2.10.3",

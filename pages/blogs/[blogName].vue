@@ -40,6 +40,7 @@ onMounted(() => {
     display: flex;
 
     #blogsTree {
+        position: fixed;
         height: 100vh;
         padding: 5vh 2vw 0 0;
         width: 20vw;
@@ -47,6 +48,7 @@ onMounted(() => {
     }
 
     #blogShow {
+        margin-left: 20vw;
         width: 80vw;
     }
 }

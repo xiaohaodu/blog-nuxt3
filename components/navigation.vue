@@ -1,50 +1,57 @@
 <template>
-    <nav id="nav">
-        <li>
-            <nuxt-link to="/blogs/README">to blogs</nuxt-link>
-        </li>
-        <li>
-            <nuxt-link to="/">to home</nuxt-link>
-        </li>
-        <li>
-            <nuxt-link to="/three/box">to box</nuxt-link>
-        </li>
-        <li>
-            <nuxt-link to="/three/bear">to bear</nuxt-link>
-        </li>
-        <li>
-            <nuxt-link to="/three/vrhouse">to vrhouse</nuxt-link>
-        </li>
-        <li>
-            <nuxt-link to="/game/pixel">to pixel</nuxt-link>
-        </li>
-        <li>
-            <nuxt-link to="/game/knifehit">to knifehit</nuxt-link>
-        </li>
-        <li>
-            <nuxt-link to="/game/breakout">to breakout</nuxt-link>
-        </li>
-        <li>
-            <nuxt-link to="/game/dreamword">to dreamword</nuxt-link>
-        </li>
-        <li>
-            <nuxt-link to="/game/kingandpigs">to king and pigs</nuxt-link>
-        </li>
-        <li>
-            <Switch></Switch>
-        </li>
-    </nav>
+    <client-only>
+        <el-menu :default-active="activeIndex" id="nav" mode="horizontal" :ellipsis="false" @select="handleSelect"
+            :background-color="themeStyle.backgroundColor" :text-color="themeStyle.fontColor"
+            :active-text-color="themeStyle.hoverColor" :router='true'>
+            <el-menu-item index="/">首页</el-menu-item>
+            <el-menu-item index="/blogs/README">博客</el-menu-item>
+            <el-sub-menu index="/three">
+                <template #title>三维</template>
+                <el-menu-item index="/three/box">立方体</el-menu-item>
+                <el-menu-item index="/three/bear">小熊</el-menu-item>
+                <el-menu-item index="/three/vrhouse">VR看房</el-menu-item>
+            </el-sub-menu>
+            <el-sub-menu index="/game">
+                <template #title>游戏</template>
+                <el-menu-item index="/game/pixel">绿球迷宫</el-menu-item>
+                <el-menu-item index="/game/knifehit">小李飞刀</el-menu-item>
+                <el-menu-item index="/game/breakout">打砖块</el-menu-item>
+                <el-menu-item index="/game/dreamword">迷宫物语</el-menu-item>
+                <el-menu-item index="/game/kingandpigs">归来</el-menu-item>
+            </el-sub-menu>
+            <el-menu-item>
+                <Switch></Switch>
+            </el-menu-item>
+        </el-menu>
+    </client-only>
 </template>
 
-<script setup>
-// const props = defineProps([]);
+<script lang="ts" setup>
+const dataThemeNight = useTheme();
+const activeIndex: Ref<string> = ref('1');
+const themeStyle = reactive({
+    fontColor: computed(() => dataThemeNight.value ? '#DEDEDE' : '#333333'),
+    backgroundColor: computed(() => dataThemeNight.value ? '#363B40' : '#FFFFFF'),
+    hoverColor: computed(() => dataThemeNight.value ? '#5BAC87' : '#5BAC87')
+});
+const handleSelect = (index: string) => {
+    activeIndex.value = index;
+};
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/theme/theme.scss';
+
 #nav {
     position: fixed;
-    top: 5vh;
-    right: 10vw;
+    width: 100vw;
+    height: 60px;
+    top: 0;
     z-index: 2;
+
+    :deep(+ div) {
+        padding-top: 60px;
+    }
+
 }
 </style>

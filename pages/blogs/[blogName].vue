@@ -16,10 +16,13 @@
 </template>
 
 <script setup>
+
 const router = useRouter();
 const blogsTree = await $fetch('/api/blogsTree');
-const readme = await $fetch('/api/blogReadme');
-let blogContent = ref(readme);
+const initContent = await $fetch('/api/readblog', {
+    params: { path: `public/_${decodeURIComponent(router.currentRoute.value.fullPath.substring(1))}.md` }
+});
+let blogContent = ref(initContent);
 let blogPath = ref('');
 const active = computed(() => {
     return router.currentRoute.value.query.GROUP ? `${router.currentRoute.value.query.GROUP}/${router.currentRoute.value.params.blogName}` : router.currentRoute.value.params.blogName;
@@ -31,6 +34,7 @@ const setBlogPath = async (content) => {
 provide('setBlogPath', setBlogPath);
 onMounted(() => {
 });
+;
 </script>
 
 <style lang="scss" scoped>

@@ -47,7 +47,7 @@ function getAllfiles(path, arr) { 	// 结果将存储到arr数组中
     }
     filesArr.forEach(item => {
         const fileName = item.name;
-        const filePath = `${path}/${fileName}`
+        const filePath = `${path}/${fileName}`;
         if (isDir(filePath)) { //如果是文件夹
             const itemFileArr = [];
             getAllfiles(filePath, itemFileArr);
@@ -65,13 +65,13 @@ const blogsTreeHandler = (blogsTree) => {
     let obj;
     for (const key in blogsTree) {
         if (blogsTree[key].name == 'README.md') {
-            obj = { ...blogsTree[key] }
-            blogsTree.splice(key, 1)
-            blogsTree.unshift(obj)
-            return
+            obj = { ...blogsTree[key] };
+            blogsTree.splice(key, 1);
+            blogsTree.unshift(obj);
+            return;
         }
     }
-}
+};
 
 export {
     getAllfiles, blogsTreeHandler

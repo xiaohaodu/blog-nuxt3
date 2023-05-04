@@ -66,7 +66,6 @@ class Pig extends Phaser.Physics.Arcade.Sprite {
         this.cursorswasd = { ...scene.input.keyboard?.addKeys('W,S,A,D') };
 
         this.on('animationcomplete', (animation: Phaser.Animations.Animation) => {
-
         });
     }
     setType(type: 'pig' | 'pigKing' | 'pigBoom' | 'pigBox') {

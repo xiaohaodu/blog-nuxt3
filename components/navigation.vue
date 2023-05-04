@@ -22,9 +22,6 @@
             <nuxt-link to="/game/knifehit">to knifehit</nuxt-link>
         </li>
         <li>
-            <nuxt-link to="/game/platepixel">to platepixel</nuxt-link>
-        </li>
-        <li>
             <nuxt-link to="/game/breakout">to breakout</nuxt-link>
         </li>
         <li>

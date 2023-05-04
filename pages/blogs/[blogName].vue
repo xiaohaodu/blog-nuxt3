@@ -43,10 +43,11 @@ onMounted(() => {
         height: 100vh;
         padding: 5vh 2vw 0 0;
         width: 20vw;
-        min-width: min-content;
         @include theme-border();
     }
 
-    #blogShow {}
+    #blogShow {
+        width: 80vw;
+    }
 }
 </style>

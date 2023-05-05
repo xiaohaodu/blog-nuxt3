@@ -16,7 +16,6 @@
 </template>
 
 <script setup>
-
 const router = useRouter();
 const blogsTree = await $fetch('/api/blogsTree');
 const initContent = await $fetch('/api/readblog', {
@@ -32,9 +31,13 @@ const setBlogPath = async (content) => {
     blogContent.value = await $fetch('/api/readblog', { params: { path: blogPath.value } });
 };
 provide('setBlogPath', setBlogPath);
-onMounted(() => {
+const { $loading } = useNuxtApp();
+onBeforeMount(() => {
+    $loading();
 });
-;
+onMounted(() => {
+    $loading().close();
+});
 </script>
 
 <style lang="scss" scoped>

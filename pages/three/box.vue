@@ -20,7 +20,10 @@ const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
 
-
+const { $loading } = useNuxtApp();
+onBeforeMount(() => {
+    $loading();
+});
 onMounted(() => {
     const controls = new OrbitControls(camera, container.value);
 
@@ -33,6 +36,7 @@ onMounted(() => {
         requestAnimationFrame(render);
     };
     render();
+    $loading().close();
 });
 </script>
 

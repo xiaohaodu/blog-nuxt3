@@ -9,6 +9,10 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 const container = ref(null);
+const { $loading } = useNuxtApp();
+onBeforeMount(() => {
+    $loading();
+});
 onMounted(() => {
     // 初始化场景
     const scene = new THREE.Scene();
@@ -81,6 +85,7 @@ onMounted(() => {
     };
 
     render();
+    $loading().close();
 });
 </script>
 

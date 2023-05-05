@@ -9,6 +9,10 @@ import { GameScene } from '~/assets/game/dreamword/Scene/GameScene';
 const dreamword = ref(null);
 let config;
 let game;
+const { $loading } = useNuxtApp();
+onBeforeMount(() => {
+    $loading();
+});
 onMounted(() => {
     config = {
         type: Phaser.AUTO,
@@ -33,10 +37,9 @@ onMounted(() => {
     };
     game = new Phaser.Game(config);
     window.focus();
+    $loading().close();
 });
-onBeforeUnmount(() => {
-    game.destroy();
-});
+
 </script>
 
 <style lang="scss" scoped>

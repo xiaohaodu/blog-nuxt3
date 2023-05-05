@@ -23,8 +23,12 @@ onMounted(() => {
     };
     game = new Phaser.Game(config);
 });
-onBeforeUnmount(() => {
-    game.destroy();
+const { $loading } = useNuxtApp();
+onBeforeMount(() => {
+    $loading();
+});
+onMounted(() => {
+    $loading().close();
 });
 </script>
 

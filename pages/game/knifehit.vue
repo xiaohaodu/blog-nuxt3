@@ -28,8 +28,15 @@ onMounted(() => {
     window.addEventListener("resize", resize, false);
 });
 
-onBeforeUnmount(() => {
-    game.destroy();
+const { $loading } = useNuxtApp();
+onBeforeMount(() => {
+    $loading();
+});
+onMounted(() => {
+    $loading().close();
+});
+onUnmounted(() => {
+    window.removeEventListener('resize', resize);
 });
 // 按比例调整窗口
 function resize() {
@@ -46,7 +53,7 @@ function resize() {
         canvas.style.width = (windowHeight * gameRatio) + "px";
         canvas.style.height = windowHeight + "px";
     }
-} 
+};
 </script>
 
 <style lang="scss" scoped>

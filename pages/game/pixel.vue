@@ -10,6 +10,10 @@ import { Game as GameScene } from '~/assets/game/pixel/js/scene/Game';
 const pixel = ref(null);
 let config;
 let game;
+const { $loading } = useNuxtApp();
+onBeforeMount(() => {
+    $loading();
+});
 onMounted(() => {
     config = {
         type: Phaser.AUTO,
@@ -33,9 +37,7 @@ onMounted(() => {
     };
     game = new Phaser.Game(config);
     window.focus();
-});
-onBeforeUnmount(() => {
-    game.destroy();
+    $loading().close();
 });
 </script>
 

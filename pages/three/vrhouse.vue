@@ -42,6 +42,11 @@ loader.load("/assets/vrhouse/Living.hdr", (texture) => {
     scene.add(sphere);
 });
 
+
+const { $loading } = useNuxtApp();
+onBeforeMount(() => {
+    $loading();
+});
 // 挂载完毕之后获取dom
 onMounted(() => {
     // 添加控制器
@@ -49,6 +54,7 @@ onMounted(() => {
     controls.enableDamping = true;
     container.value.appendChild(renderer.domElement);
     render();
+    $loading().close();
 });
 </script>
   

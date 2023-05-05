@@ -47,7 +47,8 @@ onMounted(() => {
     @include theme-active();
 }
 
-:deep(ul) {
-    min-width: min-content;
+a {
+    text-decoration: none;
+    word-break: break-all;
 }
 </style>

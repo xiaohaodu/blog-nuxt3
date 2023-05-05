@@ -31,8 +31,6 @@ const changeTheme = () => {
 
 onMounted(() => {
     dataThemeNight.value = JSON.parse(localStorage.getItem('dataThemeNight') || 'false');
-    console.log(localStorage.getItem('dataThemeNight'));
-    console.log(dataThemeNight.value);
     link1 = document.createElement('link');
     link2 = document.createElement('link');
     if (dataThemeNight.value) {

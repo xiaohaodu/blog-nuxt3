@@ -17,6 +17,7 @@
     "sass-loader": "^10.4.1"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
     "@element-plus/nuxt": "^1.0.4",
     "@nuxtjs/vercel-builder": "^0.24.0",
     "@types/three": "^0.150.1",

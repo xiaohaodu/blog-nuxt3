@@ -3,6 +3,16 @@
         <Title>{{ router.currentRoute.value.params.blogName }}</Title>
     </Head>
     <div id="blogs">
+        <el-icon @click="showTag">
+            <Expand v-show="!show" />
+            <Fold v-show="show" />
+        </el-icon>
+        <aside id="blogsTreeTag" v-show="show">
+            <ul>
+                <BlogsTree :blogsTree="blogsTree" :active="active">
+                </BlogsTree>
+            </ul>
+        </aside>
         <aside id="blogsTree">
             <ul>
                 <BlogsTree :blogsTree="blogsTree" :active="active">
@@ -38,10 +48,14 @@ onBeforeMount(() => {
 onMounted(() => {
     $loading().close();
 });
+const show = ref(false);
+const showTag = () => {
+    show.value = !show.value;
+};
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/theme/theme.scss';
+@import '../../assets/theme/theme.scss';
 
 #blogs {
     display: flex;
@@ -52,11 +66,56 @@ onMounted(() => {
         padding: 5vh 2vw 0 0;
         width: 20vw;
         @include theme-border();
+        user-select: none;
+        @include theme-color();
+        z-index: 2;
+    }
+
+    #blogsTreeTag {
+        position: fixed;
+        height: 100vh;
+        padding: 5vh 2vw 0 0;
+        width: max-content;
+        @include theme-border();
+        user-select: none;
+        display: none;
+        @include theme-color();
+        z-index: 2;
     }
 
     #blogShow {
         margin-left: 20vw;
         width: 80vw;
+    }
+
+    .el-icon {
+        display: none;
+        cursor: pointer;
+        position: fixed;
+        left: 10px;
+        top: 70px;
+        z-index: 3;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #blogs {
+        #blogsTree {
+            display: none;
+        }
+
+        #blogsTreeTag {
+            display: block;
+        }
+
+        #blogShow {
+            margin-left: 0;
+            width: 100vw;
+        }
+
+        .el-icon {
+            display: block;
+        }
     }
 }
 </style>

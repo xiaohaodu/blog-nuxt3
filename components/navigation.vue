@@ -48,8 +48,8 @@ const handleSelect = (index: string) => {
     z-index: 2;
 
     :deep(+ div) {
-        padding-top: 60px;
+        margin-top: 60px;
+        height: calc(100vh - 60px);
     }
-
 }
 </style>

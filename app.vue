@@ -7,17 +7,17 @@ useHead({
   titleTemplate: (titleChunk) => {
     return titleChunk ? `甲壳虫-${titleChunk}` : '甲壳虫';
   }
-})
-const isRouterAlive = ref(true)
+});
+const isRouterAlive = ref(true);
 const reload = () => {
-  isRouterAlive.value = false
+  isRouterAlive.value = false;
   //通过this.$nextTick()产生一个微任务,在一次dom事件循环后,重新创建组件
   nextTick(() => {
     console.log('reload');
-    isRouterAlive.value = true
-  })
-}
-provide('reload', reload)
+    isRouterAlive.value = true;
+  });
+};
+provide('reload', reload);
 </script>
 <style lang="scss">
 * {

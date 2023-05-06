@@ -26,9 +26,6 @@ const fileBlogHandler = (item) => {
     return item.path.slice(14, -3);
 };
 onMounted(() => {
-    const active = document.getElementsByClassName("active")[0];
-    const e = new Event("click", { "bubbles": false, "cancelable": false });//模拟点击
-    active.dispatchEvent(e);
 });
 </script>
 

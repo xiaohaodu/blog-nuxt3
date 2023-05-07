@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3.5.2
       - name: Install Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3.6.0
         with:
           node-version: '16.13.2'
       - name: Install npm dependencies
@@ -20,7 +20,7 @@ jobs:
       - name: Run build task
         run: npm run build
       - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@v2.1.5
+        uses: easingthemes/ssh-deploy@v4.1.8
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
           ARGS: '-rltgoDzvO --delete'

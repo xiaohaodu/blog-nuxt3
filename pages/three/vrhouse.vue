@@ -40,6 +40,7 @@ loader.load("/assets/vrhouse/Living.hdr", (texture) => {
     const sphere = new THREE.Mesh(geometry, material);
     sphere.geometry.scale(1, 1, -1);
     scene.add(sphere);
+    $loading().close();
 });
 
 
@@ -54,7 +55,6 @@ onMounted(() => {
     controls.enableDamping = true;
     container.value.appendChild(renderer.domElement);
     render();
-    $loading().close();
 });
 </script>
   

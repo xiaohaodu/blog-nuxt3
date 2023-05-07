@@ -53,6 +53,7 @@ onMounted(() => {
         });
 
         scene.add(model);
+        $loading().close();
     });
 
     // 初始化渲染器
@@ -85,13 +86,11 @@ onMounted(() => {
     };
 
     render();
-    $loading().close();
 });
 </script>
 
 <style lang="scss" scoped>
 #container {
-    padding-top: 60px;
     width: 100vw;
     height: 100vh;
     overflow: hidden;

@@ -1,6 +1,8 @@
 <template>
     <Head>
         <Title>{{ router.currentRoute.value.params.blogName }}</Title>
+        <Meta name="referrer" content="no-referrer">
+        </Meta>
     </Head>
     <div id="blogs">
         <el-icon @click="showTag">

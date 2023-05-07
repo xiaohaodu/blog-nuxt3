@@ -18,8 +18,8 @@ export default defineNuxtConfig({
             },
             meta: [
                 { charset: 'utf-8' },
-                { name: 'referrer', content: 'no-referrer' },
-                { name: "baidu-site-verification", content: "codeva-JXLMMF0sXP" }//百度快速收录
+                { name: "baidu-site-verification", content: "codeva-JXLMMF0sXP" },//百度快速收录
+                { name: "referrer", content: "strict-origin-when-cross-origin" }
             ],
             link: [
                 { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

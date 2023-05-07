@@ -24,6 +24,9 @@ export default defineNuxtConfig({
             link: [
                 { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
             ],
+            script: [
+                { src: '/baidu-analytics.js' }//添加百度分析
+            ]
         }
     },
     routeRules: {

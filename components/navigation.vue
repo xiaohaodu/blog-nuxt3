@@ -38,8 +38,6 @@ const handleSelect = (index: string) => {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/theme/theme.scss';
-
 #nav {
     position: fixed;
     width: 100vw;

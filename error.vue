@@ -16,6 +16,7 @@ const props = defineProps({
     height: 100vh;
     width: 100vw;
     background-color: rgb(255, 228, 234);
+    overflow: hidden;
 
     >img {
         height: 60vh;

@@ -18,6 +18,7 @@ export default defineNuxtConfig({
             },
             meta: [
                 { charset: 'utf-8' },
+                { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no' },
                 { name: "baidu-site-verification", content: "codeva-JXLMMF0sXP" },//百度快速收录
                 { name: "referrer", content: "strict-origin-when-cross-origin" }
             ],

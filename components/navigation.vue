@@ -21,8 +21,9 @@
             </el-sub-menu>
             <Switch></Switch>
             <div style="flex-grow: 1;"></div>
-            <div @click="toGithub" style="display: flex;cursor: pointer; margin-right: 0.8vw;"><img
-                    :src="dataThemeNight ? icon_github_night : icon_github_light" alt="github" width="36"></div>
+            <a href="https://github.com/xiaohaodu/blog-nuxt3" target="_blank"
+                style="display: flex;cursor: pointer; margin-right: 0.8vw;"><img
+                    :src="dataThemeNight ? icon_github_night : icon_github_light" alt="github" width="36"></a>
         </el-menu>
     </client-only>
 </template>
@@ -41,7 +42,6 @@ const themeStyle = reactive({
 const handleSelect = (index: string) => {
     activeIndex.value = index;
 };
-const toGithub = () => { window.open('https://github.com/xiaohaodu/blog-nuxt3'); };
 </script>
 
 <style lang="scss" scoped>

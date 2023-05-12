@@ -1,6 +1,18 @@
-# Nuxt 3 Minimal Starter
+# <center>以NUXT3为基础构建的博客网站 <br/>（非纯静态，为node-server项目）</center>
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## 博客以md格式编写，网站解析展示
+
+* 博客存储位置
+  
+  >public下的_blog文件夹作为博客的存储文件夹
+  
+  >可以建立子文件夹来分类博客，调用server接口可以解析获取博客文件树来渲染目录
+
+* 使用github action自动构建部署
+
+* 使用PM2管理项目
+
+* 目前网站接入了百度分析和谷歌分析来分析网站流量
 
 ## Setup
 
@@ -31,24 +43,4 @@ Build the application for production:
 
 ```bash
 npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-
-
-
-##tips
-```
-博客文件夹：server/assets/blogs
-博客使用语法：markdown
-博客格式：.md
-博客文件夹名用于分类博客
-博客名字包含博客基本信息：title
-博客内容...
 ```

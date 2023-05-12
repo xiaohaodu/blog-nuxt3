@@ -26,8 +26,6 @@
 
 *正确解决办法*
 
+**重点是要厘清PM2启动的项目的运行环境目录，最好使用配置文件配置项目的相关内容**
+
 将.output/ 和ecosystem.config.js deploy到服务器上（热更新有效），在ecosystem.config.js 中配置项目内容
-
-
-
-

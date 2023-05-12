@@ -3,6 +3,8 @@
         <Title>{{ router.currentRoute.value.params.blogName }}</Title>
         <Meta name="referrer" content="no-referrer">
         </Meta>
+        <Meta name="content" :content="blogContent">
+        </Meta>
     </Head>
     <div id="blogs">
         <el-icon @click="showTag">
@@ -97,6 +99,11 @@ const showTag = () => {
         left: 10px;
         top: 70px;
         z-index: 3;
+
+        >svg {
+            height: 23px;
+            width: 23px;
+        }
     }
 }
 

@@ -19,7 +19,9 @@
                 <el-menu-item index="/game/dreamword">迷宫物语</el-menu-item>
                 <el-menu-item index="/game/kingandpigs">归来</el-menu-item>
             </el-sub-menu>
-            <Switch></Switch>
+            <div style="padding: auto 2vw;">
+                <Switch></Switch>
+            </div>
             <a href="https://bq.mayuan.work/books" target="_blank">期末试题</a>
             <a href="https://os.mayuan.work/" target="_blank">点餐系统(课设)</a>
             <div style="flex-grow: 1;"></div>
@@ -57,7 +59,7 @@ const handleSelect = (index: string) => {
     a {
         display: flex;
         cursor: pointer;
-        margin: auto 10px;
+        margin: auto 2vw;
         text-decoration: none;
         overflow: hidden;
         white-space: nowrap;

@@ -20,10 +20,12 @@
                 <el-menu-item index="/game/kingandpigs">归来</el-menu-item>
             </el-sub-menu>
             <Switch></Switch>
+            <a href="https://bq.mayuan.work/books" target="_blank">期末试题</a>
+            <a href="https://os.mayuan.work/" target="_blank">点餐系统(课设)</a>
             <div style="flex-grow: 1;"></div>
-            <a href="https://github.com/xiaohaodu/blog-nuxt3" target="_blank"
-                style="display: flex;cursor: pointer; margin-right: 0.8vw;"><img
+            <a href="https://github.com/xiaohaodu/blog-nuxt3" target="_blank"><img
                     :src="dataThemeNight ? icon_github_night : icon_github_light" alt="github" width="36"></a>
+
         </el-menu>
     </client-only>
 </template>
@@ -51,6 +53,31 @@ const handleSelect = (index: string) => {
     height: 60px;
     top: 0;
     z-index: 2;
+
+    a {
+        display: flex;
+        cursor: pointer;
+        margin: auto 10px;
+        text-decoration: none;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: clip;
+    }
+
+    .el-menu-item {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    :deep(.el-sub-menu .el-sub-menu__title) {
+        padding-left: 2vw;
+        padding-right: calc(10px + 2vw);
+    }
+
+
+    :deep(.el-sub-menu .el-sub-menu__icon-arrow) {
+        right: 1.2vw
+    }
 
     :deep(+ div) {
         margin-top: 60px;

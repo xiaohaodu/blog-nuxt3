@@ -38,7 +38,7 @@ const initContent = await $fetch('/api/readblog', {
 let blogContent = ref(initContent);
 let blogPath = ref('');
 const active = computed(() => {
-    return router.currentRoute.value.params.blogPath.join('/');
+    return (typeof router.currentRoute.value.params.blogPath) == 'string' ? router.currentRoute.value.params.blogPath : router.currentRoute.value.params.blogPath.join('/');
 });
 const setBlogPath = async (content) => {
     blogPath.value = content;

@@ -38,7 +38,7 @@ const initContent = await $fetch('/api/readblog', {
 let blogContent = ref(initContent);
 let blogPath = ref('');
 const active = computed(() => {
-    return router.currentRoute.value.query.GROUP ? `${router.currentRoute.value.query.GROUP}/${router.currentRoute.value.params.blogName}` : router.currentRoute.value.params.blogName;
+    return router.currentRoute.value.params.blogPath.join('/');
 });
 const setBlogPath = async (content) => {
     blogPath.value = content;
@@ -66,13 +66,14 @@ const showTag = () => {
 
     #blogsTree {
         position: fixed;
-        height: 100vh;
+        height: calc(100vh - 60px);
         padding: 5vh 2vw 0 0;
         width: 20vw;
         @include theme-border();
         user-select: none;
         @include theme-color();
         z-index: 2;
+        overflow: auto;
     }
 
     #blogsTreeTag {
@@ -90,6 +91,8 @@ const showTag = () => {
     #blogShow {
         margin-left: 20vw;
         width: 80vw;
+        height: calc(100vh - 60px);
+        overflow: auto;
     }
 
     .el-icon {

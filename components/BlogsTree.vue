@@ -16,7 +16,7 @@ const props = defineProps(['blogsTree', 'active']);
 const blogsTree = props.blogsTree;
 const setBlogPath = inject('setBlogPath');
 const fileNameHandler = (item) => {
-    return item.name.replace(/(.md)$/, '');
+    return item.name.replace(/(.md|.js)$/, '');
 };
 const fileBlogPathHandler = (item) => {
     return item.path.slice(14, -3);

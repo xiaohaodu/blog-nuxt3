@@ -36,6 +36,6 @@ marked.setOptions({
 <style lang="scss" scoped>
 #blogContent {
     padding: 2vh;
-    user-select: none;
+    // user-select: none;
 }
 </style>

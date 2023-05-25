@@ -13,10 +13,8 @@
             </el-sub-menu>
             <el-sub-menu index="/game">
                 <template #title>游戏</template>
-                <el-menu-item index="/game/pixel">绿球迷宫</el-menu-item>
                 <el-menu-item index="/game/knifehit">小李飞刀</el-menu-item>
                 <el-menu-item index="/game/breakout">打砖块</el-menu-item>
-                <el-menu-item index="/game/dreamword">迷宫物语</el-menu-item>
                 <el-menu-item index="/game/kingandpigs">归来</el-menu-item>
             </el-sub-menu>
             <div style="padding: auto 2vw;">

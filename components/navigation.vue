@@ -34,8 +34,8 @@
 import icon_github_light from '@/assets/imgs/icon-github-light.svg';
 import icon_github_night from '@/assets/imgs/icon-github-night.svg';
 const dataThemeNight = useTheme();
-const activeIndex: Ref<string> = ref('1');
 const Router = useRouter();
+const activeIndex = ref(Router.currentRoute.value.path);
 const themeStyle = reactive({
     fontColor: computed(() => dataThemeNight.value ? '#DEDEDE' : '#333333'),
     backgroundColor: computed(() => dataThemeNight.value ? '#363B40' : '#FFFFFF'),

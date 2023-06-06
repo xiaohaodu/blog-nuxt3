@@ -28,6 +28,7 @@ onMounted(() => {
         scene: [BootScene, GameStart, TestScene]
     };
     game = new Phaser.Game(config);
+    console.log('Phaser focus');
     window.focus();
 });
 const { $loading } = useNuxtApp();

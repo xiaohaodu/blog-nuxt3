@@ -1,0 +1,10 @@
+version: "1.0"
+services:
+  container:
+    image: nginx
+    container_name: blog
+    ports:
+      - "3000:80"
+    volumes:
+      - "/home/blog/dist/nginx/default.conf:/etc/nginx/default.conf"
+      - "/home/blog/dist:/etc/nginx/html"

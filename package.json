@@ -2,7 +2,8 @@
   "name": "nuxt-app",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
+    "build": "nuxt build & copyfiles nginx/** .output & copyfiles docker-compose.yml .output",
+    "copy": "copyfiles nginx/** .output & copyfiles docker-compose.yml .output",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -11,6 +12,7 @@
   "devDependencies": {
     "@types/dompurify": "^3.0.1",
     "@types/marked": "^4.0.8",
+    "copyfiles": "^2.4.1",
     "dat.gui": "^0.7.9",
     "gsap": "^3.11.5",
     "nuxt": "^3.3.3",

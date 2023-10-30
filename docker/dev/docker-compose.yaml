@@ -1,0 +1,13 @@
+services:
+  blog:
+    image: duxiaohao/pm2:v1
+    container_name: blog-dev
+    restart: always
+    # ports:
+    #   - "3000:3000"
+    networks:
+      - docker
+    volumes:
+      - ../../.output:/blog
+    working_dir: /blog
+    entrypoint: pm2-runtime start ecosystem.config.js

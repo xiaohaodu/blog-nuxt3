@@ -2,8 +2,8 @@
   "name": "nuxt-app",
   "private": true,
   "scripts": {
-    "build": "nuxt build & copyfiles nginx/** .output & copyfiles docker-compose.yml .output",
-    "copy": "copyfiles nginx/** .output & copyfiles docker-compose.yml .output",
+    "build": "nuxt build && npm run copy",
+    "copy": "copyfiles ecosystem.config.js .output && copyfiles -u 2 docker/prod/docker-compose.yaml .output ",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",

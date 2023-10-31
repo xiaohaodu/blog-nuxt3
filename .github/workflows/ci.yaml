@@ -1,4 +1,4 @@
-name: Build app and deploy to aliyun
+name: deploy blog
 on:
   #监听push操作
   push:

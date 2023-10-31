@@ -10,7 +10,6 @@ function getfiles(path) {
     encoding: "utf-8",
     withFileTypes: true,
   });
-  console.log(dirfiles);
   return dirfiles;
 }
 // const files = getfiles('../blogs/');

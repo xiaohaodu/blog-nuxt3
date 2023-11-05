@@ -9,7 +9,7 @@
       <Expand v-show="!show" />
       <Fold v-show="show" />
     </el-icon>
-    <aside id="blogsTreeTag" v-show="show">
+    <aside v-show="show" id="blogsTreeTag">
       <ul>
         <BlogsTree :blogsTree="blogsTree" :active="active"> </BlogsTree>
       </ul>
@@ -25,30 +25,28 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 const router = useRouter();
-const blogsTree = await $fetch("/api/blogsTree");
-const initContent = await $fetch("/api/readblog", {
+const blogsTree = await $fetch('/api/blogsTree');
+const initContent = await $fetch('/api/readblog', {
   params: {
-    path: `public/_${decodeURIComponent(
-      router.currentRoute.value.fullPath.substring(1)
-    )}.md`,
+    path: `public/_${decodeURIComponent(router.currentRoute.value.fullPath.substring(1))}.md`,
   },
 });
-let blogContent = ref(initContent);
-let blogPath = ref("");
+const blogContent = ref(initContent);
+const blogPath = ref('');
 const active = computed(() => {
-  return typeof router.currentRoute.value.params.blogPath == "string"
+  return typeof router.currentRoute.value.params.blogPath === 'string'
     ? router.currentRoute.value.params.blogPath
-    : router.currentRoute.value.params.blogPath.join("/");
+    : router.currentRoute.value.params.blogPath.join('/');
 });
-const setBlogPath = async (content) => {
+const setBlogPath = async (content: any) => {
   blogPath.value = content;
-  blogContent.value = await $fetch("/api/readblog", {
+  blogContent.value = await $fetch('/api/readblog', {
     params: { path: blogPath.value },
   });
 };
-provide("setBlogPath", setBlogPath);
+provide('setBlogPath', setBlogPath);
 const { $loading } = useNuxtApp();
 onBeforeMount(() => {
   $loading();
@@ -63,7 +61,7 @@ const showTag = () => {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/theme/theme.scss";
+@import '../../assets/theme/theme.scss';
 
 #blogs {
   display: flex;

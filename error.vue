@@ -1,19 +1,22 @@
 <template>
   <div class="NotFound">
     <img src="@/assets/imgs/NotFound.svg" />
-    <div class="tip">/404/<br /><br />一只狗吃了这个页面</div>
+    <div class="tip">
+      {{ error.statusCode }}<br /><br />
+      {{ error.message }}
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-const props = defineProps({
-  error: Object,
+defineProps({
+  error: Object as any,
 });
 </script>
 
 <style lang="scss" scoped>
 .NotFound {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-color: rgb(255, 228, 234);
   overflow: hidden;

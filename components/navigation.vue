@@ -29,8 +29,36 @@
       <a href="https://bq.mayuan.work/books" target="_blank">期末试题</a>
       <a href="https://os.mayuan.work/" target="_blank">点餐系统(课设)</a>
       <div style="flex-grow: 1"></div>
+      <el-menu-item
+        :style="isLogin ? 'pointer-events: none' : ''"
+        class="m-0"
+        :index="false ? '/github/auth' : ''"
+      >
+        <nuxt-link
+          :style="isLogin ? 'pointer-events: none' : ''"
+          class="m-0 flex flex-col items-center justify-center"
+          :to="`https://github.com/login/oauth/authorize?client_id=${githubAccess.clientId}&redirect_url=${githubAccess.redirectUrl}`"
+        >
+          <img
+            class="h-6 w-6"
+            :src="
+              isLogin
+                ? githubUser?.avatar_url
+                : dataThemeNight
+                ? icon_github_night
+                : icon_github_light
+            "
+            alt="Github授权登录"
+          />
+          <span v-text="isLogin ? githubUser!.name : 'Github授权登录'" class="text-xs leading-5">
+          </span>
+        </nuxt-link>
+      </el-menu-item>
       <a href="https://github.com/xiaohaodu/blog-nuxt3" target="_blank"
-        ><img :src="dataThemeNight ? icon_github_night : icon_github_light" alt="github" width="36"
+        ><img
+          :src="dataThemeNight ? icon_github_night : icon_github_light"
+          alt="项目GitHub"
+          width="36"
       /></a>
     </el-menu>
   </client-only>
@@ -40,17 +68,54 @@
 import icon_github_light from '@/assets/imgs/icon-github-light.svg';
 import icon_github_night from '@/assets/imgs/icon-github-night.svg';
 const dataThemeNight = useTheme();
-const Router = useRouter();
+const router = useRouter();
 const activeIndex = computed(() => {
-  if (Router.currentRoute.value.matched[0].path === '/blogs/:blogPath+') {
+  if (router.currentRoute.value.matched[0].path === '/blogs/:blogPath+') {
     return '/blogs/README';
   }
-  return Router.currentRoute.value.path;
+  return router.currentRoute.value.path;
 });
 const themeStyle = reactive({
   fontColor: computed(() => (dataThemeNight.value ? '#DEDEDE' : '#333333')),
   backgroundColor: computed(() => (dataThemeNight.value ? '#363B40' : '#FFFFFF')),
   hoverColor: computed(() => (dataThemeNight.value ? '#5BAC87' : '#5BAC87')),
+});
+const { githubAccess } = useRuntimeConfig().public;
+const isLogin = ref(false);
+let githubUser = ref<GithubUser>();
+let githubAuth = ref<GithubAuth>();
+onMounted(async () => {
+  window.onstorage = () => {
+    githubAuth.value = JSON.parse(localStorage.getItem('githubAuth') as string);
+    githubUser.value = JSON.parse(localStorage.getItem('githubUser') as string);
+
+    if (githubUser.value && githubAuth.value) {
+      isLogin.value = true;
+    } else {
+      isLogin.value = false;
+    }
+  };
+  githubUser = useGithubUser();
+  githubAuth = useGithubAuth();
+  if (githubAuth.value?.refreshTime && githubAuth.value.refreshTime <= new Date().getTime()) {
+    if (githubAuth.value?.destroyTime && githubAuth.value.destroyTime <= new Date().getTime()) {
+      localStorage.removeItem('githubAuth');
+    } else {
+      const newGithubAuth = await $fetch('/api/github/resetAuth', {
+        method: 'post',
+        body: {
+          refresh_token: githubAuth.value.access_token,
+        },
+      });
+      localStorage.setItem('githubAuth', JSON.stringify(newGithubAuth));
+    }
+  }
+
+  if (githubUser.value && githubAuth.value) {
+    isLogin.value = true;
+  } else {
+    isLogin.value = false;
+  }
 });
 </script>
 
@@ -71,7 +136,9 @@ const themeStyle = reactive({
     white-space: nowrap;
     text-overflow: clip;
   }
-
+  .m-0 {
+    margin: 0;
+  }
   .el-menu-item {
     padding-left: 2vw;
     padding-right: 2vw;

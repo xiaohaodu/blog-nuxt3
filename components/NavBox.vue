@@ -1,17 +1,22 @@
 <template>
   <div>
-    <nuxt-link :to="to"></nuxt-link>
+    <nuxt-link :to="url" :target="target">{{ name }}</nuxt-link>
   </div>
 </template>
 
 <script setup lang="ts">
-const { to, icon } = defineProps({
-  to: {
+defineProps({
+  url: {
     type: String,
-    default: "",
+    required: true,
   },
-  icon: {
+  name: {
     type: String,
+    required: true,
+  },
+  target: {
+    type: String,
+    default: '_blank',
   },
 });
 </script>

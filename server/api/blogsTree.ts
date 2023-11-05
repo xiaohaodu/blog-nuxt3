@@ -1,9 +1,9 @@
-import { getAllfiles, blogsTreeHandler } from "../handler/blogsTree";
+import { getAllFiles, blogsTreeHandler } from '../handler/blogsTree';
 export default defineEventHandler((even) => {
   return new Promise((resolve, reject) => {
-    const blogsTree = [];
+    const blogsTree = new Array<any>();
     try {
-      getAllfiles("public/_blogs", blogsTree);
+      getAllFiles('public/_blogs', blogsTree);
       blogsTreeHandler(blogsTree);
       resolve(blogsTree);
     } catch (error) {

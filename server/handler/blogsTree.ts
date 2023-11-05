@@ -1,18 +1,18 @@
-import fs from "fs";
+import fs from 'fs';
 /**
  * @description  读取目录下所有目录文件  返回数组
  * @param path 文件目录
  * @returns
  */
-function getfiles(path) {
+function getFiles(path: string) {
   //读取目录下所有目录文件  返回数组
-  const dirfiles = fs.readdirSync(path, {
-    encoding: "utf-8",
+  const dirFiles = fs.readdirSync(path, {
+    encoding: 'utf-8',
     withFileTypes: true,
   });
-  return dirfiles;
+  return dirFiles;
 }
-// const files = getfiles('../blogs/');
+// const files = getFiles('../blogs/');
 // console.log(files);
 
 /**
@@ -20,7 +20,7 @@ function getfiles(path) {
  * @param filepath
  * @returns
  */
-function isFile(filepath) {
+function isFile(filepath: string) {
   //判断是否是文件 Boolean
   let stat = fs.statSync(filepath);
   return stat.isFile();
@@ -33,7 +33,7 @@ function isFile(filepath) {
  * @param filepath
  * @returns
  */
-function isDir(filepath) {
+function isDir(filepath: string) {
   //判断是否是文件夹 Boolean
   let stat = fs.statSync(filepath);
   return stat.isDirectory();
@@ -46,10 +46,10 @@ function isDir(filepath) {
  * @param path 路径
  * @param arr 将结果存储到该数组中
  */
-function getAllfiles(path, arr) {
+function getAllFiles(path: string, arr: Array<any>) {
   // 结果将存储到arr数组中
-  const filesArr = getfiles(path); // 获取目录下所有文件
-  if (path.slice(-1) == "/") {
+  const filesArr = getFiles(path); // 获取目录下所有文件
+  if (path.slice(-1) == '/') {
     path = path.slice(0, -1);
   }
   filesArr.forEach((item) => {
@@ -57,34 +57,34 @@ function getAllfiles(path, arr) {
     const filePath = `${path}/${fileName}`;
     if (isDir(filePath)) {
       //如果是文件夹
-      const itemFileArr = [];
-      getAllfiles(filePath, itemFileArr);
+      const itemFileArr = new Array<any>();
+      getAllFiles(filePath, itemFileArr);
       const dir = {
         name: fileName,
-        type: "dir",
+        type: 'dir',
         dirPath: `${filePath}/`,
         children: itemFileArr,
       };
       arr.push(dir);
     } else if (isFile(filePath)) {
       // 如果是文件
-      arr.push({ name: fileName, type: "file", path: filePath });
+      arr.push({ name: fileName, type: 'file', path: filePath });
     }
   });
 }
 // const arr = [];
-// getAllfiles('../blogs', arr);
+// getAllFiles('../blogs', arr);
 // console.log(arr);
-const blogsTreeHandler = (blogsTree) => {
+const blogsTreeHandler = (blogsTree: Array<any>) => {
   let obj;
   for (const key in blogsTree) {
-    if (blogsTree[key].name == "README.md") {
+    if (blogsTree[key].name == 'README.md') {
       obj = { ...blogsTree[key] };
-      blogsTree.splice(key, 1);
+      blogsTree.splice(key as any, 1);
       blogsTree.unshift(obj);
       return;
     }
   }
 };
 
-export { getAllfiles, blogsTreeHandler };
+export { getAllFiles, blogsTreeHandler };

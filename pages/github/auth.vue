@@ -32,7 +32,8 @@ onMounted(async () => {
       avatar_url: userInfo.avatar_url,
       name: userInfo.name,
     };
-    window.onstorage && window.onstorage();
+    const onstorage = window.onstorage as Function;
+    onstorage && onstorage();
     router.push('/');
   }
 });

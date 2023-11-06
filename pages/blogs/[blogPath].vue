@@ -27,12 +27,12 @@
 
 <script lang="ts" setup>
 const router = useRouter();
-const blogsTree = await $fetch('/api/blogsTree');
-const initContent = await $fetch('/api/readblog', {
+const blogsTree = (await $fetch('/api/blogsTree')) as any;
+const initContent = (await $fetch('/api/readblog', {
   params: {
     path: `public/_${decodeURIComponent(router.currentRoute.value.fullPath.substring(1))}.md`,
   },
-});
+})) as string;
 const blogContent = ref(initContent);
 const blogPath = ref('');
 const active = computed(() => {

@@ -14,7 +14,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3.6.0
         with:
-          node-version: "16.13.2"
+          node-version: '16.20.0'
       - name: Install npm dependencies
         run: npm install
       - name: Run build task
@@ -23,9 +23,9 @@ jobs:
         uses: easingthemes/ssh-deploy@v4.1.8
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
-          ARGS: "-rltgoDzvO --delete"
-          SOURCE: ".output/"
-          REMOTE_HOST: "81.68.108.130"
+          ARGS: '-rltgoDzvO --delete'
+          SOURCE: '.output/'
+          REMOTE_HOST: '81.68.108.130'
           REMOTE_USER: root
-          TARGET: "/home/blog" # 打包后的 dist 文件夹将放在
+          TARGET: '/home/blog' # 打包后的 dist 文件夹将放在
           # EXCLUDE: "node_modules,.git,.github"

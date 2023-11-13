@@ -46,7 +46,7 @@ function isDir(filepath: string) {
  * @param path 路径
  * @param arr 将结果存储到该数组中
  */
-function getAllFiles(path: string, arr: Array<any>) {
+function getAllFiles(path: string, arr: BlogsTree) {
   // 结果将存储到arr数组中
   const filesArr = getFiles(path); // 获取目录下所有文件
   if (path.slice(-1) == '/') {
@@ -57,13 +57,14 @@ function getAllFiles(path: string, arr: Array<any>) {
     const filePath = `${path}/${fileName}`;
     if (isDir(filePath)) {
       //如果是文件夹
-      const itemFileArr = new Array<any>();
+      const itemFileArr = new Array() as BlogsTree;
       getAllFiles(filePath, itemFileArr);
       const dir = {
         name: fileName,
         type: 'dir',
         dirPath: `${filePath}/`,
         children: itemFileArr,
+        expand: false,
       };
       arr.push(dir);
     } else if (isFile(filePath)) {
@@ -75,12 +76,12 @@ function getAllFiles(path: string, arr: Array<any>) {
 // const arr = [];
 // getAllFiles('../blogs', arr);
 // console.log(arr);
-const blogsTreeHandler = (blogsTree: Array<any>) => {
+const blogsTreeHandler = (blogsTree: BlogsTree) => {
   let obj;
   for (const key in blogsTree) {
     if (blogsTree[key].name == 'README.md') {
       obj = { ...blogsTree[key] };
-      blogsTree.splice(key as any, 1);
+      blogsTree.splice(Number(key), 1);
       blogsTree.unshift(obj);
       return;
     }

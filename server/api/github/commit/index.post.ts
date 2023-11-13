@@ -1,11 +1,3 @@
-import type {
-  RepoCreateBlobs,
-  RepoCreateCommit,
-  RepoCreateTree,
-  RepoGetCommit,
-  RepoGetRef,
-  RepoUpdateRef,
-} from '..';
 export default defineEventHandler((event) => {
   return new Promise(async (resolve, reject) => {
     const body = await readBody(event);
@@ -17,21 +9,10 @@ export default defineEventHandler((event) => {
     /**
      * The file mode; one of 100644 for file (blob), 100755 for executable (blob), 040000 for subdirectory (tree), 160000 for submodule (commit), or 120000 for a blob that specifies the path of a symlink.
      */
-    const apiConfig = {
-      /** @description — The file referenced in the tree. */
-      path: '',
-      /** @description — The new blob's content */
-      content: '',
-      /** @description — The file mode; one of 100644 for file (blob), 100755 for executable (blob), 040000 for subdirectory (tree), 160000 for submodule (commit), or 120000 for a blob that specifies the path of a symlink.
 
-      @enum */
-      mode: '' as '100644' | '100755' | '040000' | '160000' | '120000',
-      /** @description — Either blob, tree, or commit.
-       * @enum */
-      type: '' as 'blob' | 'commit' | 'tree',
-      /** @description — The commit message*/
-      message: '',
-    };
+    const apiConfig = {
+      ...body.commitConfig,
+    } as CommitConfig;
     try {
       //1. 获取 Ref
       const getCommitRefConfig = {
@@ -78,6 +59,8 @@ export default defineEventHandler((event) => {
           createBlobsConfig: createBlobsConfig,
         },
       })) as RepoCreateBlobs['response']['data'];
+      console.log(createBlobs);
+
       // 4. 生成 tree
       const createTreeConfig = {
         owner: baseConfig.owner,
@@ -131,6 +114,8 @@ export default defineEventHandler((event) => {
       })) as RepoUpdateRef['response']['data'];
       resolve(updateRef);
     } catch (error) {
+      console.log(error);
+
       resolve(error);
     }
   });

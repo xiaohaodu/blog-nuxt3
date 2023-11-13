@@ -80,7 +80,8 @@ const themeStyle = reactive({
   backgroundColor: computed(() => (dataThemeNight.value ? '#363B40' : '#FFFFFF')),
   hoverColor: computed(() => (dataThemeNight.value ? '#5BAC87' : '#5BAC87')),
 });
-const { githubAccess } = useRuntimeConfig().public;
+const { githubAccessDev, githubAccessServe } = useRuntimeConfig().public;
+const githubAccess = import.meta.env.PROD ? githubAccessServe : githubAccessDev;
 const isLogin = ref(false);
 let githubUser = ref<GithubUser>();
 let githubAuth = ref<GithubAuth>();
@@ -104,13 +105,12 @@ onMounted(async () => {
       const newGithubAuth = await $fetch('/api/github/resetAuth', {
         method: 'post',
         body: {
-          refresh_token: githubAuth.value.access_token,
+          refresh_token: githubAuth.value.refresh_token,
         },
       });
       localStorage.setItem('githubAuth', JSON.stringify(newGithubAuth));
     }
   }
-
   if (githubUser.value && githubAuth.value) {
     isLogin.value = true;
   } else {

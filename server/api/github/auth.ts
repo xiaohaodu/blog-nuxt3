@@ -1,10 +1,12 @@
+import { NuxtError } from '#app';
 import axios from 'axios';
 import https from 'https';
 export default defineEventHandler((event) => {
   return new Promise(async (resolve, reject) => {
     const body = getQuery(event);
     try {
-      const { githubAccess } = useRuntimeConfig().public;
+      const { githubAccessDev, githubAccessServe } = useRuntimeConfig().public;
+      const githubAccess = import.meta.env.PROD ? githubAccessServe : githubAccessDev;
       const { data: githubAuth } = await axios({
         httpsAgent: new https.Agent({
           rejectUnauthorized: false,
@@ -38,7 +40,11 @@ export default defineEventHandler((event) => {
         302,
       );
     } catch (error) {
-      sendError(event, new Error(JSON.stringify(error)));
+      throw createError({
+        statusCode: (error as NuxtError).statusCode,
+        statusMessage: (error as NuxtError).statusMessage,
+        message: (error as NuxtError).cause as string,
+      });
     }
   });
 });

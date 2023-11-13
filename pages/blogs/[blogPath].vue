@@ -5,48 +5,62 @@
     <Meta name="content" :content="blogContent"> </Meta>
   </Head>
   <div id="blogs">
-    <el-icon @click="showTag">
-      <Expand v-show="!show" />
-      <Fold v-show="show" />
+    <el-icon @click="showTagTab">
+      <Expand v-show="!showTag" />
+      <Fold v-show="showTag" />
     </el-icon>
-    <aside v-show="show" id="blogsTreeTag">
+    <aside v-show="showTag" id="blogsTreeTag">
       <ul>
-        <BlogsTree :blogsTree="blogsTree" :active="active"> </BlogsTree>
+        <BlogsTree
+          :setBlogPath="setBlogPath"
+          :showType="showType"
+          :tag="true"
+          :blogsTree="blogsTree"
+          :active="active"
+        >
+        </BlogsTree>
       </ul>
     </aside>
     <aside id="blogsTree">
       <ul>
-        <BlogsTree :blogsTree="blogsTree" :active="active"> </BlogsTree>
+        <BlogsTree
+          :setBlogPath="setBlogPath"
+          :showType="showType"
+          :tag="true"
+          :blogsTree="blogsTree"
+          :active="active"
+        >
+        </BlogsTree>
       </ul>
     </aside>
     <div id="blogShow">
-      <BlogShow :blogContent="blogContent"></BlogShow>
+      <BlogShow :type="showType" :blogContent="blogContent"></BlogShow>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 const router = useRouter();
-const blogsTree = (await $fetch('/api/blogsTree')) as any;
-const initContent = (await $fetch('/api/readblog', {
-  params: {
-    path: `public/_${decodeURIComponent(router.currentRoute.value.fullPath.substring(1))}.md`,
-  },
-})) as string;
-const blogContent = ref(initContent);
+const blogsTree = ref((await $fetch('/api/blogsTree')) as BlogsTree);
 const blogPath = ref('');
 const active = computed(() => {
   return typeof router.currentRoute.value.params.blogPath === 'string'
     ? router.currentRoute.value.params.blogPath
     : router.currentRoute.value.params.blogPath.join('/');
 });
-const setBlogPath = async (content: any) => {
+const blogContent = ref(
+  (await $fetch('/api/readblog', {
+    params: {
+      path: `public/_blogs/${active.value}.md`,
+    },
+  })) as string,
+);
+const setBlogPath = async (content: string) => {
   blogPath.value = content;
   blogContent.value = await $fetch('/api/readblog', {
     params: { path: blogPath.value },
   });
 };
-provide('setBlogPath', setBlogPath);
 const { $loading } = useNuxtApp();
 onBeforeMount(() => {
   $loading();
@@ -54,10 +68,12 @@ onBeforeMount(() => {
 onMounted(() => {
   $loading().close();
 });
-const show = ref(false);
-const showTag = () => {
-  show.value = !show.value;
+const showTag = ref(false);
+const showTagTab = () => {
+  showTag.value = !showTag.value;
 };
+
+const showType = ref<ContentShowType>('show');
 </script>
 
 <style lang="scss" scoped>

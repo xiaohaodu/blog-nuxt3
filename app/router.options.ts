@@ -8,5 +8,13 @@ export default <RouterConfig>{
       path: '/blogs/:blogPath+',
       component: () => import('~/pages/blogs/[blogPath].vue'),
     },
+    {
+      path: '/blogs/edit/:blogPath+',
+      component: () => import('~/pages/blogs/edit/[blogPath].vue'),
+    },
+    {
+      path: '/blogs/add/:blogPath+',
+      component: () => import('~/pages/blogs/add/[blogPath].vue'),
+    },
   ],
 };

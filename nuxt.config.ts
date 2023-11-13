@@ -50,10 +50,15 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      githubAccess: {
+      githubAccessDev: {
         clientId: 'Iv1.5999dbc8911f0be3',
         clientSecret: 'b217aad003ec30bea365e2f103eee2079f1cad8e',
         redirectUrl: 'http://localhost:3000/api/github/auth',
+      },
+      githubAccessServe: {
+        clientId: 'Iv1.07bde629d78e1f2e',
+        clientSecret: '2f01a4c05d206e7101f1a4ad5c810998c8f36821',
+        redirectUrl: 'https://blog.mayuan.work/api/github/auth',
       },
     },
   },

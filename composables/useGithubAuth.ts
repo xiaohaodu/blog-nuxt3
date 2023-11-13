@@ -3,7 +3,7 @@ export const useGithubAuth = (): Ref<GithubAuth> =>
     if (process.client) {
       return JSON.parse(localStorage.getItem('githubAuth') as string);
     } else {
-      return '';
+      throw new Error('useGithubAuth 仅可在process.client时运行');
     }
   });
 export const useGithubUser = (): Ref<GithubUser> =>
@@ -11,6 +11,6 @@ export const useGithubUser = (): Ref<GithubUser> =>
     if (process.client) {
       return JSON.parse(localStorage.getItem('githubUser') as string);
     } else {
-      return '';
+      throw new Error('useGithubUser 仅可在process.client时运行');
     }
   });

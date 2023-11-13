@@ -15,7 +15,7 @@ declare global {
     path?: string;
     expand?: boolean;
     dirPath?: string;
-    children?: Array<BlogsTreeBranch>;
+    children?: BlogsTree;
   };
 
   type GithubAuth = {

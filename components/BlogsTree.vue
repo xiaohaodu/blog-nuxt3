@@ -51,12 +51,14 @@
         </div>
       </div>
       <ul
-        v-show="blogTreeBranch.expand && blogTreeBranch.children && blogTreeBranch.children.length"
+        v-show="
+          blogTreeBranch?.expand && blogTreeBranch?.children && blogTreeBranch?.children.length
+        "
       >
         <BlogsTree
           :showType="showType"
           :tag="false"
-          :blogsTree="blogTreeBranch.children"
+          :blogsTree="blogTreeBranch?.children"
           :setBlogPath="setBlogPath"
           :active="active"
         >

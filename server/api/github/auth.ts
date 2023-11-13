@@ -1,4 +1,4 @@
-import { NuxtError } from '#app';
+import type { NuxtError } from '#app';
 import axios from 'axios';
 import https from 'https';
 export default defineEventHandler((event) => {

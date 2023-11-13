@@ -58,7 +58,7 @@
         <BlogsTree
           :showType="showType"
           :tag="false"
-          :blogsTree="blogTreeBranch?.children"
+          :blogsTree="blogTreeBranch.children!"
           :setBlogPath="setBlogPath"
           :active="active"
         >

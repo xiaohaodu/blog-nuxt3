@@ -5,6 +5,7 @@ export default defineEventHandler((event) => {
     const body = await readBody(event);
     const { githubAccessDev, githubAccessServe } = useRuntimeConfig().public;
     const githubAccess = import.meta.env.PROD ? githubAccessServe : githubAccessDev;
+    console.log(githubAccess, import.meta.env.PROD);
     try {
       const { data: githubAuth } = await axios({
         httpsAgent: new https.Agent({

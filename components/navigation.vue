@@ -82,6 +82,8 @@ const themeStyle = reactive({
 });
 const { githubAccessDev, githubAccessServe } = useRuntimeConfig().public;
 const githubAccess = import.meta.env.PROD ? githubAccessServe : githubAccessDev;
+console.log(githubAccess, import.meta.env.PROD);
+
 const isLogin = ref(false);
 let githubUser = ref<GithubUser>();
 let githubAuth = ref<GithubAuth>();

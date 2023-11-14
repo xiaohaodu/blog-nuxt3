@@ -3,9 +3,9 @@ import https from 'https';
 export default defineEventHandler((event) => {
   return new Promise(async (resolve, reject) => {
     const body = await readBody(event);
-    const { githubAccessDev, githubAccessServe } = useRuntimeConfig().public;
-    const githubAccess = import.meta.env.PROD ? githubAccessServe : githubAccessDev;
-    console.log(githubAccess, import.meta.env.PROD);
+    const { githubAccessDev, githubAccessServe, prod } = useRuntimeConfig().public;
+    const githubAccess = prod ? githubAccessServe : githubAccessDev;
+    console.log(githubAccess, prod);
     try {
       const { data: githubAuth } = await axios({
         httpsAgent: new https.Agent({

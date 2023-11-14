@@ -50,6 +50,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
+      prod: false,
       githubAccessDev: {
         clientId: 'Iv1.5999dbc8911f0be3',
         clientSecret: 'b217aad003ec30bea365e2f103eee2079f1cad8e',

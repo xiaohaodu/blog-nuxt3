@@ -12,6 +12,14 @@ export default defineNuxtConfig({
   vite: {
     build: {
       assetsInlineLimit: 0, // 图片转 base64 编码的阈值
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          //生产环境时移除console.log()
+          drop_console: true,
+          drop_debugger: true,
+        },
+      },
     },
   },
   app: {

@@ -8,8 +8,6 @@ export default defineEventHandler((event) => {
       const { githubAccessDev, githubAccessServe } = useRuntimeConfig().public;
       const githubAccess =
         process.env.NODE_ENV === 'production' ? githubAccessServe : githubAccessDev;
-      console.log(process.env.NODE_ENV);
-
       const { data: githubAuth } = await axios({
         httpsAgent: new https.Agent({
           rejectUnauthorized: false,

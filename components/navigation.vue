@@ -82,7 +82,6 @@ const themeStyle = reactive({
 });
 const { githubAccessDev, githubAccessServe } = useRuntimeConfig().public;
 const githubAccess = process.env.NODE_ENV === 'production' ? githubAccessServe : githubAccessDev;
-console.log(process.env.NODE_ENV);
 
 const isLogin = ref(false);
 let githubUser = ref<GithubUser>();

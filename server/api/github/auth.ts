@@ -5,9 +5,10 @@ export default defineEventHandler((event) => {
   return new Promise(async (resolve, reject) => {
     const body = getQuery(event);
     try {
-      const { githubAccessDev, githubAccessServe, prod } = useRuntimeConfig().public;
-      const githubAccess = prod ? githubAccessServe : githubAccessDev;
-      console.log(githubAccess, prod);
+      const { githubAccessDev, githubAccessServe } = useRuntimeConfig().public;
+      const githubAccess =
+        process.env.NODE_ENV === 'production' ? githubAccessServe : githubAccessDev;
+      console.log(process.env.NODE_ENV);
 
       const { data: githubAuth } = await axios({
         httpsAgent: new https.Agent({

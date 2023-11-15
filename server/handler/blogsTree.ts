@@ -64,7 +64,7 @@ function getAllFiles(path: string, arr: BlogsTree) {
         type: 'dir',
         dirPath: `${filePath}/`,
         children: itemFileArr,
-        expand: false,
+        expand: true,
       };
       arr.push(dir);
     } else if (isFile(filePath)) {

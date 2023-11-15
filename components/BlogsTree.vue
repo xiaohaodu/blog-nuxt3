@@ -27,10 +27,14 @@
     </div>
     <div v-if="blogTreeBranch.type == 'dir'">
       <div class="group flex items-center justify-between">
-        <span>{{ blogTreeBranch.name }}</span>
+        <span
+          @click="switchFolderState(blogTreeBranch)"
+          class="peer cursor-pointer hover:text-[#42B883]"
+          >{{ blogTreeBranch.name }}</span
+        >
         <div class="flex flex-nowrap items-baseline">
           <button
-            @click="addFile(blogTreeBranch)"
+            @click.stop="addFile(blogTreeBranch)"
             class="hidden hover:text-[#42B883] group-hover:block"
           >
             <el-icon><DocumentAdd /></el-icon>
@@ -43,7 +47,7 @@
           </button> -->
           <button
             @click="switchFolderState(blogTreeBranch)"
-            class="hidden hover:text-[#42B883] group-hover:block"
+            class="hidden hover:text-[#42B883] group-hover:block peer-hover:text-[#42B883]"
           >
             <el-icon v-show="!blogTreeBranch?.expand"><FolderOpened /></el-icon>
             <el-icon v-show="blogTreeBranch?.expand"><Folder /></el-icon>

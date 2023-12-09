@@ -11,7 +11,7 @@
       :router="true"
     >
       <el-menu-item index="/">首页</el-menu-item>
-      <el-menu-item index="/blogs/README">博客</el-menu-item>
+      <el-menu-item index="/blogs/README">灵感工场</el-menu-item>
       <el-sub-menu index="/three">
         <template #title>三维</template>
         <el-menu-item index="/three/box">立方体</el-menu-item>

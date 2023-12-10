@@ -23,7 +23,7 @@
           ></el-switch>
         </button>
         <button class="flex flex-nowrap items-center justify-center px-1">
-          <el-input v-model="blogName" placeholder="请输入博客标题"></el-input>
+          <el-input v-model="blogName" type="text" placeholder="请输入博客标题"></el-input>
         </button>
         <button class="flex flex-nowrap items-center justify-center px-1">
           <span class="w-fit whitespace-nowrap font-mono">博客分类:</span>
@@ -111,8 +111,16 @@ const switchEditOperation = () => {
 };
 const messageTag = ref(false);
 const blogDirPathExtendTag = ref(false);
-const blogDirPathExtend = computed(() => props.blogPath);
-const blogName = ref('');
+const blogDirPathExtend = computed(() => {
+  const temp = props.blogPath?.split('/');
+  temp?.pop();
+  return temp?.join('/') || '';
+});
+
+const blogName = computed(() => {
+  const temp = props.blogPath?.split('/');
+  return temp?.pop() || '';
+});
 const commitConfig = ref<CommitConfig>({
   message: '',
   mode: '100644',
@@ -141,7 +149,7 @@ const putBlog = async () => {
     }
   }
   try {
-    const res = await $fetch('/api/github/commit', {
+    await $fetch('/api/github/commit', {
       method: 'post',
       body: {
         accessToken: githubAuth.value?.access_token,

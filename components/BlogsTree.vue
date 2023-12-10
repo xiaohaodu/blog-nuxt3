@@ -129,7 +129,6 @@ const folderState = ref(true);
 const switchFolderStateDom = ref();
 const switchFolderStateAll = () => {
   folderState.value = !folderState.value;
-  console.log(switchFolderStateDom.value);
   if (switchFolderStateDom.value)
     for (const dom of switchFolderStateDom.value) {
       if (folderState.value) {

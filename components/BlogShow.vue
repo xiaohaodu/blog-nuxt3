@@ -111,7 +111,7 @@ const switchEditOperation = () => {
 };
 const messageTag = ref(false);
 const blogDirPathExtendTag = ref(false);
-const blogDirPathExtend = ref(props.blogPath);
+const blogDirPathExtend = computed(() => props.blogPath);
 const blogName = ref('');
 const commitConfig = ref<CommitConfig>({
   message: '',

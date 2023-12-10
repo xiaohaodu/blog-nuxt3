@@ -44,9 +44,13 @@ const router = useRouter();
 const blogsTree = ref((await $fetch('/api/blogsTree')) as BlogsTree);
 const blogPath = ref('');
 const active = computed(() => {
-  return typeof router.currentRoute.value.params.blogPath === 'string'
-    ? router.currentRoute.value.params.blogPath
-    : router.currentRoute.value.params.blogPath.join('/');
+  if (typeof router.currentRoute.value.params.blogPath === 'string') {
+    return router.currentRoute.value.params.blogPath;
+  } else if (Array.isArray(router.currentRoute.value.params.blogPath)) {
+    return router.currentRoute.value.params.blogPath.join('/');
+  } else {
+    return '';
+  }
 });
 const blogContent = ref(
   (await $fetch('/api/readblog', {
@@ -58,7 +62,9 @@ const blogContent = ref(
 watch(
   () => active.value,
   (cur, pre) => {
-    setBlogPath(`public/_blogs/${cur}.md`);
+    if (cur) {
+      setBlogPath(`public/_blogs/${cur}.md`);
+    }
   },
 );
 const setBlogPath = async (content: string) => {

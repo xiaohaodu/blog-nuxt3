@@ -117,11 +117,8 @@ const editBlog = (blogTreeBranch?: BlogsTreeBranch) => {
   router.push(`/blogs/edit/${blogTreeBranch?.path!.slice(14, -3)}`);
 };
 const addFile = (blogTreeBranch?: BlogsTreeBranch) => {
-  router.push(`/blogs/add/${blogTreeBranch?.dirPath!.slice(14)}`);
+  router.push(`/blogs/add/${blogTreeBranch?.dirPath!.slice(14) || ''}`);
 };
-// const addFolder = (blogTreeBranch?: BlogsTreeBranch) => {
-//   console.log(blogTreeBranch);
-// };
 const switchFolderState = (blogsTreeBranch?: BlogsTreeBranch) => {
   if (blogsTreeBranch) blogsTreeBranch.expand = !blogsTreeBranch.expand;
 };

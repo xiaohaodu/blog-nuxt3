@@ -23,7 +23,7 @@
           >{{ fileNameHandler(blogTreeBranch) }}</nuxt-link
         >
         <button
-          v-if="tag && githubAuth"
+          v-if="githubAuth"
           @click="editBlog(blogTreeBranch)"
           class="hidden hover:text-[#42B883] group-hover:block"
         >
@@ -103,11 +103,9 @@ const props = defineProps({
   },
 });
 let githubAuth = ref<GithubAuth>();
-if (props.tag) {
-  onMounted(() => {
-    githubAuth = useGithubAuth();
-  });
-}
+onMounted(() => {
+  githubAuth = useGithubAuth();
+});
 const router = useRouter();
 const fileNameHandler = (blogTreeBranch: BlogsTreeBranch) => {
   return blogTreeBranch.name.replace(/(.md|.js)$/, '');

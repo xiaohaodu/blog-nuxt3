@@ -55,6 +55,12 @@ const blogContent = ref(
     },
   })) as string,
 );
+watch(
+  () => active.value,
+  (cur, pre) => {
+    setBlogPath(`public/_blogs/${cur}.md`);
+  },
+);
 const setBlogPath = async (content: string) => {
   blogPath.value = content;
   blogContent.value = await $fetch('/api/readblog', {

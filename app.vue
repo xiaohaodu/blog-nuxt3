@@ -1,6 +1,7 @@
 <template>
-  <Navigation></Navigation>
-  <router-view></router-view>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 <script lang="ts" setup>
 useHead({

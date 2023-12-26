@@ -59,7 +59,6 @@ export default defineEventHandler((event) => {
           createBlobsConfig: createBlobsConfig,
         },
       })) as RepoCreateBlobs['response']['data'];
-      console.log(createBlobs);
 
       // 4. 生成 tree
       const createTreeConfig = {
@@ -114,8 +113,6 @@ export default defineEventHandler((event) => {
       })) as RepoUpdateRef['response']['data'];
       resolve(updateRef);
     } catch (error) {
-      console.log(error);
-
       resolve(error);
     }
   });

@@ -117,10 +117,12 @@ const blogDirPathExtend = computed(() => {
   return temp?.join('/') || '';
 });
 
-const blogName = computed(() => {
-  const temp = props.blogPath?.split('/');
-  return temp?.pop() || '';
-});
+const blogName = ref(
+  (() => {
+    const temp = props.blogPath?.split('/');
+    return temp?.pop() || '';
+  })(),
+);
 const commitConfig = ref<CommitConfig>({
   message: '',
   mode: '100644',

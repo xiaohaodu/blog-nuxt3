@@ -110,12 +110,13 @@ const showType = ref<ContentShowType>('show');
     position: fixed;
     height: 100vh;
     padding: 5vh 2vw 0 0;
-    width: max-content;
+    width: 100vw;
     @include theme-border();
     user-select: none;
     display: none;
     @include theme-color();
     z-index: 2;
+    overflow: auto;
   }
 
   #blogShow {

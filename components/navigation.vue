@@ -3,22 +3,26 @@
     <el-menu
       :default-active="activeIndex"
       id="nav"
+      ref="refMenu"
       mode="horizontal"
       :ellipsis="false"
       :background-color="themeStyle.backgroundColor"
       :text-color="themeStyle.fontColor"
       :active-text-color="themeStyle.hoverColor"
       :router="true"
+      @select="clearFocus"
     >
-      <el-menu-item index="/">首页</el-menu-item>
-      <el-menu-item index="/blogs/README">灵感工场</el-menu-item>
-      <el-sub-menu index="/three">
+      <el-menu-item :key="router.currentRoute.value.fullPath" index="/">首页</el-menu-item>
+      <el-menu-item :key="router.currentRoute.value.fullPath" index="/blogs/README"
+        >灵感工场</el-menu-item
+      >
+      <el-sub-menu :key="router.currentRoute.value.fullPath" index="/three">
         <template #title>三维</template>
         <el-menu-item index="/three/box">立方体</el-menu-item>
         <el-menu-item index="/three/bear">小熊</el-menu-item>
         <el-menu-item index="/three/vrhouse">VR看房</el-menu-item>
       </el-sub-menu>
-      <el-sub-menu index="/game">
+      <el-sub-menu :key="router.currentRoute.value.fullPath" index="/game">
         <template #title>游戏</template>
         <el-menu-item index="/game/knifehit">小李飞刀</el-menu-item>
         <el-menu-item index="/game/breakout">打砖块</el-menu-item>
@@ -30,6 +34,7 @@
       <a href="https://os.mayuan.work/" target="_blank">点餐系统(课设)</a>
       <div style="flex-grow: 1"></div>
       <el-menu-item
+        :key="router.currentRoute.value.fullPath"
         :style="isLogin ? 'pointer-events: none' : ''"
         class="m-0"
         :index="false ? '/github/auth' : ''"
@@ -75,6 +80,8 @@ const activeIndex = computed(() => {
   }
   return router.currentRoute.value.path;
 });
+const refMenu = ref() as Ref<HTMLMenuElement>;
+const clearFocus = (index: string, indexPath: string, item: any) => {};
 const themeStyle = reactive({
   fontColor: computed(() => (dataThemeNight.value ? '#DEDEDE' : '#333333')),
   backgroundColor: computed(() => (dataThemeNight.value ? '#363B40' : '#FFFFFF')),

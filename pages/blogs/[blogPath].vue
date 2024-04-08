@@ -9,7 +9,7 @@
       <Expand v-show="!showTag" />
       <Fold v-show="showTag" />
     </el-icon>
-    <aside v-show="showTag" id="blogsTreeTag">
+    <el-aside v-show="showTag" id="blogsTreeTag">
       <ul>
         <BlogsTree
           :setBlogPath="setBlogPath"
@@ -20,8 +20,8 @@
         >
         </BlogsTree>
       </ul>
-    </aside>
-    <aside id="blogsTree">
+    </el-aside>
+    <el-aside id="blogsTree">
       <ul>
         <BlogsTree
           :setBlogPath="setBlogPath"
@@ -32,7 +32,7 @@
         >
         </BlogsTree>
       </ul>
-    </aside>
+    </el-aside>
     <div id="blogShow">
       <BlogShow :type="showType" :blogContent="blogContent"></BlogShow>
     </div>

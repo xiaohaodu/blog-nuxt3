@@ -10,7 +10,6 @@
       :text-color="themeStyle.fontColor"
       :active-text-color="themeStyle.hoverColor"
       :router="true"
-      @select="clearFocus"
     >
       <el-menu-item :key="router.currentRoute.value.fullPath" index="/">首页</el-menu-item>
       <el-menu-item :key="router.currentRoute.value.fullPath" index="/blogs/README"
@@ -81,7 +80,6 @@ const activeIndex = computed(() => {
   return router.currentRoute.value.path;
 });
 const refMenu = ref() as Ref<HTMLMenuElement>;
-const clearFocus = (index: string, indexPath: string, item: any) => {};
 const themeStyle = reactive({
   fontColor: computed(() => (dataThemeNight.value ? '#DEDEDE' : '#333333')),
   backgroundColor: computed(() => (dataThemeNight.value ? '#363B40' : '#FFFFFF')),

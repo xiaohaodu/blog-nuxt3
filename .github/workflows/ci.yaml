@@ -15,17 +15,20 @@ jobs:
         uses: actions/setup-node@v3.6.0
         with:
           node-version: '18.18.1'
-      - name: Install npm dependencies
-        run: npm install
+      - uses: pnpm/action-setup@v3.0.0
+        name: Install pnpm dependencies
+        with:
+          version: 9.5.0
+          run_install: true
       - name: Run build task
-        run: npm run build
+        run: pnpm build
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v4.1.8
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
           ARGS: '-rltgoDzvO --delete'
           SOURCE: '.output/'
-          REMOTE_HOST: '81.68.108.130'
+          REMOTE_HOST: '182.92.222.231'
           REMOTE_USER: root
           TARGET: '/home/blog' # 打包后的 dist 文件夹将放在
           # EXCLUDE: "node_modules,.git,.github"

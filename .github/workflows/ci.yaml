@@ -22,7 +22,17 @@ jobs:
           run_install: true
       - name: Run build task
         run: pnpm build
-      - name: Deploy to Server
+      - name: Deploy to tencent cloud server
+        uses: easingthemes/ssh-deploy@v4.1.8
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          ARGS: '-rltgoDzvO --delete'
+          SOURCE: '.output/'
+          REMOTE_HOST: '62.234.163.223'
+          REMOTE_USER: root
+          TARGET: '/home/blog' # 打包后的 dist 文件夹将放在
+          # EXCLUDE: "node_modules,.git,.github"
+      - name: Deploy to aliyun cloud server
         uses: easingthemes/ssh-deploy@v4.1.8
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}

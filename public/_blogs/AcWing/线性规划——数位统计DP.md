@@ -11,17 +11,7 @@ using namespace std;
 
 const int N = 10;
 
-/*
-
-001~abc-1, 999
-
-abc
-    1. num[i] < x, 0
-    2. num[i] == x, 0~efg
-    3. num[i] > x, 0~999
-
-*/
-
+// 辅助函数：计算从num的第l位到第r位构成的数字
 int get(vector<int> num, int l, int r)
 {
     int res = 0;
@@ -29,6 +19,7 @@ int get(vector<int> num, int l, int r)
     return res;
 }
 
+// 辅助函数：计算10的x次方
 int power10(int x)
 {
     int res = 1;
@@ -36,29 +27,30 @@ int power10(int x)
     return res;
 }
 
+// 主函数：计算数字n中数字x出现的次数
 int count(int n, int x)
 {
-    if (!n) return 0;
+    if (!n) return 0; // 如果n为0，则返回0
 
-    vector<int> num;
+    vector<int> num; // 存储n的每一位数字
     while (n)
     {
-        num.push_back(n % 10);
-        n /= 10;
+        num.push_back(n % 10); // 将n的每一位数字存入vector
+        n /= 10; // 移除最低位
     }
-    n = num.size();
+    n = num.size(); // n现在表示数字n的位数
 
-    int res = 0;
-    for (int i = n - 1 - !x; i >= 0; i -- )
+    int res = 0; // 初始化结果
+    for (int i = n - 1 - !x; i >= 0; i -- ) // 从最高位到最低位遍历
     {
-        if (i < n - 1)
+        if (i < n - 1) // 如果不是最高位
         {
-            res += get(num, n - 1, i + 1) * power10(i);
-            if (!x) res -= power10(i);
+            res += get(num, n - 1, i + 1) * power10(i); // 加上前缀贡献
+            if (!x) res -= power10(i); // 如果x为0，减去多余的贡献
         }
 
-        if (num[i] == x) res += get(num, i - 1, 0) + 1;
-        else if (num[i] > x) res += power10(i);
+        if (num[i] == x) res += get(num, i - 1, 0) + 1; // 如果当前位等于x，加上贡献
+        else if (num[i] > x) res += power10(i); // 如果当前位大于x，加上贡献
     }
 
     return res;
@@ -67,12 +59,12 @@ int count(int n, int x)
 int main()
 {
     int a, b;
-    while (cin >> a >> b , a)
+    while (cin >> a >> b && a) // 读取a和b，直到输入结束
     {
-        if (a > b) swap(a, b);
+        if (a > b) swap(a, b); // 确保a ≤ b
 
-        for (int i = 0; i <= 9; i ++ )
-            cout << count(b, i) - count(a - 1, i) << ' ';
+        for (int i = 0; i <= 9; i ++ ) // 对于每个数字0到9
+            cout << count(b, i) - count(a - 1, i) << ' '; // 输出在[a, b]区间内该数字出现的次数
         cout << endl;
     }
 

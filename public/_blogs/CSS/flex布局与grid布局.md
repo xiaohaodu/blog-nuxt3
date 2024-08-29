@@ -2,7 +2,7 @@
 
 1. flex布局
 
-   <iframe src="//player.bilibili.com/player.html?aid=61537661&bvid=BV1mt411c7N9&cid=107033430&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+   <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=988812159&bvid=BV1A44y1Z7Bp&cid=927483369&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
    1. flex容器基础概念
 

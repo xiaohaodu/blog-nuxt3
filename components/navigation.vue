@@ -1,9 +1,9 @@
 <template>
   <client-only>
     <el-menu
-      :default-active="activeIndex"
       id="nav"
       ref="refMenu"
+      :default-active="activeIndex"
       mode="horizontal"
       :ellipsis="false"
       :background-color="themeStyle.backgroundColor"
@@ -26,11 +26,18 @@
         <el-menu-item index="/game/knifehit">小李飞刀</el-menu-item>
         <el-menu-item index="/game/breakout">打砖块</el-menu-item>
       </el-sub-menu>
+      <el-sub-menu index="/works">
+        <template #title>作品</template>
+        <el-menu-item>
+          <a href="https://os.mayuan.work/" target="_blank">点餐系统(课设)</a>
+        </el-menu-item>
+        <el-menu-item>
+          <a href="https://bq.mayuan.work/books" target="_blank">期末试题</a>
+        </el-menu-item>
+      </el-sub-menu>
       <div style="padding: auto 2vw">
         <Switch></Switch>
       </div>
-      <a href="https://bq.mayuan.work/books" target="_blank">期末试题</a>
-      <a href="https://os.mayuan.work/" target="_blank">点餐系统(课设)</a>
       <div style="flex-grow: 1"></div>
       <el-menu-item
         :key="router.currentRoute.value.fullPath"
@@ -54,7 +61,7 @@
             "
             alt="Github授权登录"
           />
-          <span v-text="isLogin ? githubUser!.name : 'Github授权登录'" class="text-xs leading-5">
+          <span class="text-xs leading-5" v-text="isLogin ? githubUser!.name : 'Github授权登录'">
           </span>
         </nuxt-link>
       </el-menu-item>
@@ -136,7 +143,7 @@ onMounted(async () => {
   a {
     display: flex;
     cursor: pointer;
-    margin: auto 2vw;
+    margin: auto 1vw;
     text-decoration: none;
     overflow: hidden;
     white-space: nowrap;

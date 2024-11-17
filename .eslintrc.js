@@ -24,7 +24,7 @@ module.exports = {
       rules: {
         'vue/multi-word-component-names': 'off',
         'vue/no-multiple-template-root': 'off',
-        'vue/attribute-hyphenation': 'ignore',
+        'vue/attribute-hyphenation': 'off',
         'vue/attributes-order': 'off',
       },
     },

@@ -15,7 +15,7 @@ export default defineNuxtConfig({
       minify: 'terser',
       terserOptions: {
         compress: {
-          //生产环境时移除console.log()
+          // 生产环境时移除console.log()
           drop_console: true,
           drop_debugger: true,
         },
@@ -34,12 +34,12 @@ export default defineNuxtConfig({
           content:
             'width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no',
         },
-        { name: 'baidu-site-verification', content: 'codeva-JXLMMF0sXP' }, //百度快速收录
+        { name: 'baidu-site-verification', content: 'codeva-JXLMMF0sXP' }, // 百度快速收录
         { name: 'referrer', content: 'strict-origin-when-cross-origin' },
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
       script: [
-        { src: '/baidu-analytics.js' }, //添加百度分析
+        { src: '/baidu-analytics.js' }, // 添加百度分析
       ],
     },
   },
